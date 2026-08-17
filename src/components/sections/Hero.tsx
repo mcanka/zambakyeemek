@@ -10,34 +10,34 @@ const SUPPORT_STAT = STATS.find((s) => s.label === "Personel")!;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-celik">
+    <section className="relative overflow-hidden bg-lacivert">
       <Placeholder
         label="Tesis Fotoğrafı — Yer Tutucu"
-        alt="Mekaş Yemek Sanayi üretim tesisi"
+        alt="Zirve Yemek üretim tesisi"
         tone="steel"
         className="absolute inset-0"
         priority
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-celik via-celik/85 to-celik/55"
+        className="absolute inset-0 bg-gradient-to-r from-lacivert via-lacivert/85 to-lacivert/55"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-celik-2 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-lacivert-2 via-transparent to-transparent"
       />
 
       <Container className="relative pt-16 pb-14 md:pt-24 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-10 items-end">
           <div>
             <Reveal>
-              <p className="font-mono text-xs tracking-[0.24em] uppercase text-safran-soft mb-6">
-                {COMPANY.city} · {COMPANY.district}
+              <p className="font-mono text-xs tracking-[0.24em] uppercase text-kirmizi mb-6">
+                {COMPANY.shortName} · {COMPANY.tagline}
               </p>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[1.03] tracking-tight text-un-soft max-w-2xl">
-                Gerçek lezzeti <em className="italic text-safran-soft">endüstriyel</em> ölçekle buluşturuyoruz.
+                Gerçek lezzeti <em className="italic text-kirmizi">endüstriyel</em> ölçekle buluşturuyoruz.
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -60,11 +60,11 @@ export function Hero() {
           </div>
 
           <Reveal delay={200} className="lg:mb-1">
-            <div className="border border-un-soft/15 bg-celik-2/70 backdrop-blur-sm p-7 md:p-8">
+            <div className="border border-un-soft/15 bg-lacivert-2/70 backdrop-blur-sm p-7 md:p-8">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-un-soft/50">
                 Günlük Üretim Kapasitesi
               </p>
-              <div className="mt-4 flex items-baseline gap-2 font-mono text-safran-soft">
+              <div className="mt-4 flex items-baseline gap-2 font-mono text-kirmizi">
                 <Counter
                   value={CAPACITY.value}
                   className="text-[clamp(2.6rem,5vw,3.6rem)] leading-none tabular-nums"

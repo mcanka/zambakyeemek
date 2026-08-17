@@ -5,13 +5,13 @@ type Variant = "primary" | "outline-dark" | "outline-light" | "ghost-dark";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary:
-    "bg-biber text-un-soft hover:bg-biber-dark",
+    "bg-kirmizi text-un-soft hover:bg-kirmizi-dark",
   "outline-dark":
     "border border-komur/25 text-komur hover:border-komur hover:bg-komur/5",
   "outline-light":
     "border border-un/30 text-un-soft hover:border-un hover:bg-un/10",
   "ghost-dark":
-    "text-un-soft hover:text-safran-soft",
+    "text-un-soft hover:text-kirmizi",
 };
 
 export function Button({

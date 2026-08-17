@@ -4,7 +4,7 @@ import { Placeholder } from "@/components/ui/Placeholder";
 import { Reveal } from "@/components/ui/Reveal";
 import { SECTORS } from "@/lib/data";
 
-const TONES = ["steel", "biber", "zeytin"] as const;
+const TONES = ["steel", "kirmizi", "yesil"] as const;
 
 export function Sectors() {
   return (
@@ -30,10 +30,10 @@ export function Sectors() {
                 />
                 <div
                   aria-hidden
-                  className="absolute inset-0 bg-gradient-to-t from-celik-2 via-celik-2/40 to-transparent"
+                  className="absolute inset-0 bg-gradient-to-t from-lacivert-2 via-lacivert-2/40 to-transparent"
                 />
                 <div className="absolute inset-x-0 bottom-0 p-6 md:p-7">
-                  <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-safran-soft">
+                  <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-kirmizi">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-2 font-display text-2xl text-un-soft leading-tight">

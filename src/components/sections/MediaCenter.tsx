@@ -8,13 +8,13 @@ const formatter = new Intl.DateTimeFormat("tr-TR", { day: "2-digit", month: "lon
 
 export function MediaCenter() {
   return (
-    <section className="bg-celik texture-steel py-20 md:py-28">
+    <section className="bg-lacivert texture-steel py-20 md:py-28">
       <Container>
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6">
           <Reveal>
             <SectionHeading
               eyebrow="Medya Merkezi"
-              title="Mekaş'tan güncel haberler ve daha fazlası."
+              title="Zirve Yemek'ten güncel haberler ve daha fazlası."
               tone="dark"
               className="max-w-xl"
             />
@@ -47,7 +47,7 @@ export function MediaCenter() {
                 </div>
                 <span
                   aria-hidden
-                  className="hidden md:inline text-safran-soft text-xl transition-transform duration-300 group-hover:translate-x-1"
+                  className="hidden md:inline text-kirmizi text-xl transition-transform duration-300 group-hover:translate-x-1"
                 >
                   →
                 </span>

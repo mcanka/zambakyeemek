@@ -14,7 +14,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#1e2b30",
+          background: "#343246",
           padding: "72px",
           fontFamily: "sans-serif",
         }}
@@ -25,10 +25,10 @@ export default function OpengraphImage() {
             fontSize: 28,
             letterSpacing: 4,
             textTransform: "uppercase",
-            color: "#e2a530",
+            color: "#f9423a",
           }}
         >
-          {COMPANY.city} · {COMPANY.district}
+          {COMPANY.shortName} · {COMPANY.tagline}
         </div>
 
         <div
@@ -38,16 +38,16 @@ export default function OpengraphImage() {
             gap: 20,
           }}
         >
-          <div style={{ display: "flex", fontSize: 76, fontWeight: 700, color: "#faf7f0", lineHeight: 1.05 }}>
+          <div style={{ display: "flex", fontSize: 76, fontWeight: 700, color: "#ffffff", lineHeight: 1.05 }}>
             {COMPANY.name}
           </div>
-          <div style={{ display: "flex", fontSize: 32, color: "rgba(250,247,240,0.7)", maxWidth: 900 }}>
-            Endüstriyel ölçekte, günlük 30.000 öğün üretim kapasitesiyle güvenilir toplu yemek hizmeti.
+          <div style={{ display: "flex", fontSize: 32, color: "rgba(255,255,255,0.7)", maxWidth: 900 }}>
+            Endüstriyel ölçekte, günlük binlerce öğün üretim kapasitesiyle güvenilir toplu yemek hizmeti.
           </div>
         </div>
 
-        <div style={{ display: "flex", fontSize: 22, color: "rgba(250,247,240,0.45)", letterSpacing: 2 }}>
-          mekasyemek.com
+        <div style={{ display: "flex", fontSize: 22, color: "rgba(255,255,255,0.45)", letterSpacing: 2 }}>
+          zirveyemek.com
         </div>
       </div>
     ),

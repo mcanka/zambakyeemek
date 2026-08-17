@@ -5,7 +5,7 @@ import { FormEvent, useState } from "react";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const FIELD_CLASS =
-  "w-full bg-transparent border-b rule-light py-3 text-komur placeholder:text-komur/35 focus:border-biber transition-colors outline-none";
+  "w-full bg-transparent border-b rule-light py-3 text-komur placeholder:text-komur/35 focus:border-kirmizi transition-colors outline-none";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -72,7 +72,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="border rule-light p-8 md:p-10">
-        <p className="font-mono text-xs tracking-[0.14em] uppercase text-biber">Alındı</p>
+        <p className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Alındı</p>
         <p className="mt-4 font-display text-2xl text-komur leading-snug">
           Mesajınız için teşekkürler.
         </p>
@@ -129,7 +129,7 @@ export function ContactForm() {
       </div>
 
       {status === "error" ? (
-        <p role="alert" className="text-sm text-biber">
+        <p role="alert" className="text-sm text-kirmizi">
           {errorMessage}
         </p>
       ) : null}
@@ -137,7 +137,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center gap-2.5 bg-biber text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-biber-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="inline-flex items-center gap-2.5 bg-kirmizi text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-kirmizi-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Gönderiliyor…" : "Mesajı Gönder"}
       </button>

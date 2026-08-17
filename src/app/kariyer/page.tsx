@@ -8,13 +8,13 @@ import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Kariyer",
-  description: "Mekaş Yemek Sanayi ekibine katılın — açık pozisyonlar ve başvuru bilgileri.",
+  description: "Zirve Yemek ekibine katılın — açık pozisyonlar ve başvuru bilgileri.",
 };
 
 const REASONS = [
   {
     title: "Büyüyen Bir Ekip",
-    description: "300'ün üzerinde çalışanımızla, kesintisiz üretim disiplinine sahip geniş bir ekibin parçası olun.",
+    description: "250'nin üzerinde çalışanımızla, kesintisiz üretim disiplinine sahip geniş bir ekibin parçası olun.",
   },
   {
     title: "Gelişim Fırsatı",
@@ -38,12 +38,12 @@ export default function KariyerPage() {
 
       <section className="bg-un-soft py-20 md:py-28">
         <Container>
-          <SectionHeading eyebrow="Neden Mekaş?" title="Kesintisiz üretimin arkasındaki ekibin parçası olun." />
+          <SectionHeading eyebrow="Neden Zirve Yemek?" title="Kesintisiz üretimin arkasındaki ekibin parçası olun." />
           <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
             {REASONS.map((reason, i) => (
               <Reveal key={reason.title} delay={i * 100}>
                 <div className="border rule-light p-8 h-full">
-                  <span className="font-mono text-xs text-biber tracking-[0.14em] uppercase">
+                  <span className="font-mono text-xs text-kirmizi tracking-[0.14em] uppercase">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-4 font-display text-xl text-komur">{reason.title}</h3>
@@ -55,11 +55,11 @@ export default function KariyerPage() {
         </Container>
       </section>
 
-      <section className="bg-celik texture-steel py-20 md:py-24">
+      <section className="bg-lacivert texture-steel py-20 md:py-24">
         <Container>
           <Reveal>
             <div className="max-w-xl">
-              <p className="font-mono text-xs tracking-[0.2em] uppercase text-safran-soft mb-4">
+              <p className="font-mono text-xs tracking-[0.2em] uppercase text-kirmizi mb-4">
                 Açık Pozisyonlar
               </p>
               <h2 className="font-display text-2xl md:text-3xl text-un-soft leading-tight">

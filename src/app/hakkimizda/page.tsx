@@ -11,7 +11,7 @@ import { CERTIFICATIONS, COMPANY } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Mekaş Yemek Sanayi'nin hikayesi, vizyonu ve Bursa Hilaller OSB'deki üretim tesisi hakkında bilgi edinin.",
+    "Zirve Yemek'in hikayesi, vizyonu ve üretim tesisi hakkında bilgi edinin.",
 };
 
 export default function HakkimizdaPage() {
@@ -20,7 +20,7 @@ export default function HakkimizdaPage() {
       <PageHero
         eyebrow="Hakkımızda"
         title="Sanayi disipliniyle, ev sıcaklığında yemek üretiyoruz."
-        description={`${COMPANY.name}, Bursa ${COMPANY.district} içinde konumlanan tesisinde endüstriyel ölçekte gerçek lezzeti üretme vizyonuyla çalışır.`}
+        description={`${COMPANY.name}, modern üretim tesisinde endüstriyel ölçekte gerçek lezzeti üretme vizyonuyla çalışır.`}
         imageLabel="Tesis Girişi — Yer Tutucu"
       />
 
@@ -38,8 +38,8 @@ export default function HakkimizdaPage() {
             <Reveal delay={100}>
               <SectionHeading eyebrow="Hikayemiz" title="Lezzeti, ölçeğe rağmen değil ölçekle birlikte büyütüyoruz." />
               <p className="mt-6 text-komur/70 leading-relaxed">
-                Bursa {COMPANY.district} içinde konumlanan tesisimiz, geniş
-                kapalı alanı ve modern üretim ekipmanlarıyla günlük binlerce
+                Üretim tesisimiz, geniş kapalı alanı ve modern üretim
+                ekipmanlarıyla günlük binlerce
                 öğünü aynı hijyen ve kalite standardında hazırlayabilecek
                 kapasiteye sahiptir.
               </p>
@@ -55,7 +55,7 @@ export default function HakkimizdaPage() {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
             <Reveal>
               <div className="border rule-light p-8 md:p-10 h-full">
-                <span className="font-mono text-xs tracking-[0.14em] uppercase text-biber">Vizyon</span>
+                <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Vizyon</span>
                 <p className="mt-4 font-display text-xl leading-snug text-komur">
                   Toplu yemek üretiminde, güvenilirliği ve şeffaflığı sektör
                   standardı haline getiren referans kuruluş olmak.
@@ -64,7 +64,7 @@ export default function HakkimizdaPage() {
             </Reveal>
             <Reveal delay={100}>
               <div className="border rule-light p-8 md:p-10 h-full">
-                <span className="font-mono text-xs tracking-[0.14em] uppercase text-biber">Misyon</span>
+                <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Misyon</span>
                 <p className="mt-4 font-display text-xl leading-snug text-komur">
                   Hizmet verdiğimiz her kuruma; hijyenik, dengeli ve zamanında
                   ulaşan bir yemek deneyimi sunmak.

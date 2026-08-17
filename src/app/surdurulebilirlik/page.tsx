@@ -8,7 +8,7 @@ import { SUSTAINABILITY_PILLARS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Sürdürülebilirlik",
   description:
-    "Mekaş Yemek Sanayi'nin insan, toplum ve çevre odaklı sürdürülebilirlik yaklaşımı.",
+    "Zirve Yemek'in insan, toplum ve çevre odaklı sürdürülebilirlik yaklaşımı.",
 };
 
 const DETAILS: Record<string, string[]> = {
@@ -48,7 +48,7 @@ export default function SurdurulebilirlikPage() {
                     <ul className="mt-5 space-y-2.5">
                       {DETAILS[pillar.title]?.map((line) => (
                         <li key={line} className="flex gap-3 text-sm text-komur/60 leading-relaxed">
-                          <span aria-hidden className="text-biber mt-1">—</span>
+                          <span aria-hidden className="text-kirmizi mt-1">—</span>
                           {line}
                         </li>
                       ))}

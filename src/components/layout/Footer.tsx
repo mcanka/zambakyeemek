@@ -14,19 +14,19 @@ export function Footer() {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="bg-celik-2 texture-steel">
+    <footer className="bg-lacivert-2 texture-steel">
       <Container className="py-16 md:py-20">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1.1fr] gap-12 md:gap-8">
           <div>
             <Logo tone="dark" />
             <p className="mt-5 text-sm leading-relaxed text-un-soft/60 max-w-xs">
-              Bursa {COMPANY.district} içinde konumlanan tesisimizde, endüstriyel
-              ölçekte gerçek lezzeti hijyen ve disiplinle üretiyoruz.
+              Modern üretim tesisimizde, endüstriyel ölçekte gerçek lezzeti
+              hijyen ve disiplinle üretiyoruz.
             </p>
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-safran-soft mb-4">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
               Site Haritası
             </p>
             <ul className="space-y-2.5">
@@ -41,7 +41,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-safran-soft mb-4 md:opacity-0">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4 md:opacity-0">
               &nbsp;
             </p>
             <ul className="space-y-2.5">
@@ -56,7 +56,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-safran-soft mb-4">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
               İletişim
             </p>
             <address className="not-italic text-sm text-un-soft/70 leading-relaxed space-y-2">
@@ -81,7 +81,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="text-un-soft/50 hover:text-safran-soft transition-colors font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-safran-soft/50 px-2.5 py-1.5"
+                  className="text-un-soft/50 hover:text-kirmizi transition-colors font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-kirmizi/50 px-2.5 py-1.5"
                 >
                   {s.label.slice(0, 2)}
                 </a>
@@ -95,7 +95,7 @@ export function Footer() {
             © {year} {COMPANY.legalName}. Tüm hakları saklıdır.
           </p>
           <p className="font-mono text-[11px] text-un-soft/40 tracking-wide">
-            Bursa, Türkiye
+            Türkiye
           </p>
         </div>
       </Container>

@@ -2,16 +2,17 @@
 // TODO işaretli alanlar, gerçek kurumsal veriler sağlandığında güncellenmelidir.
 
 export const COMPANY = {
-  name: "Mekaş Yemek Sanayi",
-  legalName: "Mekaş Yemek Sanayi ve Ticaret A.Ş.", // TODO: gerçek unvan ile teyit edilmeli
-  shortName: "Mekaş",
-  city: "Bursa",
-  district: "Hilaller Organize Sanayi Bölgesi", // Kaynak: referans site
-  addressLine: "Hilaller OSB, Bursa / Türkiye", // TODO: açık adres ile değiştirilmeli
-  phoneDisplay: "0224 000 00 00", // TODO: gerçek telefon numarası
-  phoneHref: "+902240000000",
-  email: "info@mekasyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
-  mapsQuery: "Hilaller Organize Sanayi Bölgesi, Bursa",
+  name: "Zirve Yemek",
+  legalName: "Zirve Yemek Catering", // TODO: gerçek ticari unvan ile değiştirilmeli
+  shortName: "Zirve",
+  tagline: "Catering", // logodaki alt başlık
+  city: "", // TODO: gerçek şehir bilgisi eklenmeli
+  district: "", // TODO: gerçek adres/bölge bilgisi eklenmeli
+  addressLine: "Adres bilgisi yakında eklenecek", // TODO: açık adres ile değiştirilmeli
+  phoneDisplay: "0212 000 00 00", // TODO: gerçek telefon numarası
+  phoneHref: "+902120000000",
+  email: "info@zirveyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
+  mapsQuery: "Türkiye", // TODO: gerçek adres eklenince tesis konumuna güncellenmeli
   social: {
     instagram: "https://instagram.com/", // TODO
     facebook: "https://facebook.com/", // TODO
@@ -37,12 +38,12 @@ export const FOOTER_LINKS = [
   { href: "/kariyer", label: "Kariyer" },
 ] as const;
 
-// Kaynak: referans site istatistik şeridi (ekran görüntüsünden okunmuştur)
+// TODO: illüstratif örnek rakamlardır — gerçek kapasite/personel verileriyle değiştirilmeli
 export const STATS = [
-  { value: 5000, suffix: "³", unit: "m", label: "Kapalı Alan" },
-  { value: 300, suffix: "+", unit: "", label: "Personel" },
-  { value: 30000, suffix: "", unit: "öğün / gün", label: "Üretim Kapasitesi" },
-  { value: 30, suffix: "+", unit: "", label: "Soğutmalı Nakliye Aracı" },
+  { value: 4000, suffix: "³", unit: "m", label: "Kapalı Alan" },
+  { value: 250, suffix: "+", unit: "", label: "Personel" },
+  { value: 25000, suffix: "", unit: "öğün / gün", label: "Üretim Kapasitesi" },
+  { value: 25, suffix: "+", unit: "", label: "Soğutmalı Nakliye Aracı" },
 ] as const;
 
 export const SERVICES = [
@@ -154,11 +155,12 @@ export const NEWS = [
   },
 ] as const;
 
+// TODO: örnek/placeholder isimlerdir — gerçek iştirak adları ve logolarıyla değiştirilmeli
 export const PARTNERS = [
-  { name: "Mekyem" }, // TODO: gerçek iştirak adları/logoları ile değiştirilmeli
-  { name: "Mekdöner" },
-  { name: "Mekpiliç" },
-  { name: "Mek Gıda" },
+  { name: "Zirve Lojistik" },
+  { name: "Zirve Tarım" },
+  { name: "Zirve Gıda" },
+  { name: "Zirve Eğitim Vakfı" },
 ] as const;
 
 export const SUSTAINABILITY_PILLARS = [

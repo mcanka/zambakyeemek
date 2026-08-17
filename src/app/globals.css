@@ -1,32 +1,29 @@
 @import "tailwindcss";
 
 /*
-  Tasarım token sistemi — "Buhar & Çelik" (Steam & Steel)
-  Un (un beyazı) + Çelik (paslanmaz çelik) + Safran + Biber (paprika) + Zeytin
-  Endüstriyel toplu yemek üretiminin dünyasından: buhar, çelik tezgah,
-  baharat, soğuk zincir ve tarım. Mekaş referans sitesinin kırmızı/lacivert
-  kurumsal şablonundan bilinçli olarak ayrışır.
+  Tasarım token sistemi — Zirve Yemek Catering
+  Beyaz + Lacivert (#343246) + Kırmızı (#F9423A) + Yeşil (sürdürülebilirlik),
+  mekasyemek.com'un gerçek marka renk paletinden (indirilen CSS'ten okundu)
+  birebir alınmıştır. Altın/kirmizi tonu yalnızca logo görselinde kalır,
+  site arayüzünde ayrı bir vurgu rengi olarak kullanılmaz.
 */
 @theme inline {
-  --color-un: #f4efe4;
-  --color-un-soft: #faf7f0;
-  --color-un-line: #e4dbc8;
+  --color-un: #ffffff;
+  --color-un-soft: #f7f7f8;
+  --color-un-line: #e6e8eb;
 
-  --color-celik: #1e2b30;
-  --color-celik-2: #141e22;
-  --color-celik-soft: #2a3a40;
+  --color-lacivert: #343246;
+  --color-lacivert-2: #242331;
+  --color-lacivert-soft: #46445c;
 
-  --color-safran: #e2a530;
-  --color-safran-soft: #f0c874;
+  --color-kirmizi: #f9423a;
+  --color-kirmizi-dark: #d6301f;
 
-  --color-biber: #c14a24;
-  --color-biber-dark: #9a3a1c;
+  --color-yesil: #2f6b46;
+  --color-yesil-soft: #7cd070;
+  --color-yesil-2: #1d5038;
 
-  --color-zeytin: #5c6b4c;
-  --color-zeytin-soft: #7c8c68;
-  --color-zeytin-2: #3f4a35;
-
-  --color-komur: #171e1f;
+  --color-komur: #1a1922;
 
   --font-display: var(--font-fraunces);
   --font-body: var(--font-plex-sans);
@@ -63,12 +60,12 @@ body {
 }
 
 ::selection {
-  background: var(--color-biber);
+  background: var(--color-kirmizi);
   color: var(--color-un-soft);
 }
 
 :focus-visible {
-  outline: 2px solid var(--color-biber);
+  outline: 2px solid var(--color-kirmizi);
   outline-offset: 3px;
 }
 
@@ -87,7 +84,7 @@ body {
     font-family: var(--font-mono), ui-monospace, monospace;
   }
 
-  /* Grain/texture overlay used on dark steel sections for tactile depth */
+  /* Grain/texture overlay used on dark sections for tactile depth */
   .texture-steel {
     position: relative;
     isolation: isolate;
@@ -102,8 +99,8 @@ body {
     background-image:
       repeating-linear-gradient(
         115deg,
-        rgba(244, 239, 228, 0.035) 0px,
-        rgba(244, 239, 228, 0.035) 1px,
+        rgba(255, 255, 255, 0.04) 0px,
+        rgba(255, 255, 255, 0.04) 1px,
         transparent 1px,
         transparent 3px
       );
@@ -136,6 +133,6 @@ body {
     border-color: var(--color-un-line);
   }
   .rule-dark {
-    border-color: rgba(244, 239, 228, 0.16);
+    border-color: rgba(255, 255, 255, 0.14);
   }
 }

@@ -30,14 +30,14 @@ export function MobileMenu() {
       >
         <span className="block h-px w-6 bg-un-soft" />
         <span className="block h-px w-6 bg-un-soft" />
-        <span className="block h-px w-4 self-end bg-safran-soft" />
+        <span className="block h-px w-4 self-end bg-kirmizi" />
       </button>
 
       {open
         ? createPortal(
-            <div className="fixed inset-0 z-50 bg-celik-2 texture-steel flex flex-col">
+            <div className="fixed inset-0 z-50 bg-lacivert-2 texture-steel flex flex-col">
               <div className="flex items-center justify-between px-6 h-20 border-b rule-dark">
-                <span className="font-display text-2xl text-un-soft">Mekaş</span>
+                <span className="font-display text-2xl text-un-soft">Zirve Yemek</span>
                 <button
                   type="button"
                   onClick={() => setOpen(false)}
@@ -56,20 +56,20 @@ export function MobileMenu() {
                     className="font-display text-3xl text-un-soft py-3 border-b rule-dark flex items-center justify-between"
                   >
                     {link.label}
-                    <span className="font-mono text-xs text-safran-soft">
+                    <span className="font-mono text-xs text-kirmizi">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                   </Link>
                 ))}
               </nav>
               <div className="px-6 py-8 border-t rule-dark">
-                <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-safran-soft tracking-wide">
+                <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-kirmizi tracking-wide">
                   {COMPANY.phoneDisplay}
                 </a>
                 <Link
                   href="/iletisim"
                   onClick={() => setOpen(false)}
-                  className="mt-4 block text-center bg-biber text-un-soft py-3.5 text-sm font-medium tracking-wide"
+                  className="mt-4 block text-center bg-kirmizi text-un-soft py-3.5 text-sm font-medium tracking-wide"
                 >
                   Teklif Al
                 </Link>

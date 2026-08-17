@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Eğitim kurumları, kamu kurumları ve sanayi kuruluşlarına özel toplu yemek hizmeti çözümlerimiz.",
 };
 
-const TONES = ["steel", "biber", "zeytin"] as const;
+const TONES = ["steel", "kirmizi", "yesil"] as const;
 
 export default function SektorlerPage() {
   return (
@@ -37,7 +37,7 @@ export default function SektorlerPage() {
                     className="aspect-[16/10] w-full"
                   />
                   <div>
-                    <span className="font-mono text-xs tracking-[0.14em] uppercase text-biber">
+                    <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">
                       {String(i + 1).padStart(2, "0")}
                     </span>
                     <h2 className="mt-3 font-display text-2xl md:text-3xl text-komur leading-tight">

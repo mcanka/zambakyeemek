@@ -7,7 +7,7 @@ import { CERTIFICATIONS, PRODUCTION_STEPS } from "@/lib/data";
 
 export function Production() {
   return (
-    <section className="bg-celik texture-steel py-20 md:py-28">
+    <section className="bg-lacivert texture-steel py-20 md:py-28">
       <Container>
         <Reveal>
           <SectionHeading
@@ -22,7 +22,7 @@ export function Production() {
           <Reveal delay={100}>
             <Placeholder
               label="Üretim Hattı — Yer Tutucu"
-              alt="Mekaş üretim tesisi"
+              alt="Zirve Yemek üretim tesisi"
               tone="steel"
               className="aspect-[4/5] w-full border border-un-soft/10"
             />
@@ -33,7 +33,7 @@ export function Production() {
               {PRODUCTION_STEPS.map((step, i) => (
                 <Reveal key={step.step} delay={150 + i * 90} as="li">
                   <div className="flex gap-6 py-6 md:py-7">
-                    <span className="font-mono text-sm text-safran-soft pt-1 w-8 shrink-0">
+                    <span className="font-mono text-sm text-kirmizi pt-1 w-8 shrink-0">
                       {step.step}
                     </span>
                     <div>

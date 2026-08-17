@@ -17,9 +17,9 @@ export function About() {
               tone="light"
             />
             <p className="mt-6 text-base md:text-lg leading-relaxed text-komur/70 max-w-xl">
-              {COMPANY.name}, Bursa {COMPANY.district} içinde konumlanan
-              tesisinde; hijyen standartlarından ödün vermeden, endüstriyel
-              ölçekte gerçek lezzeti üretme vizyonuyla çalışır. Merkezi
+              {COMPANY.name}, modern üretim tesisinde; hijyen standartlarından
+              ödün vermeden, endüstriyel ölçekte gerçek lezzeti üretme
+              vizyonuyla çalışır. Merkezi
               mutfağımızdan çıkan her öğün, aynı titizlikle hazırlanır ve
               soğuk zincir korunarak sofralara ulaşır.
             </p>
@@ -44,8 +44,8 @@ export function About() {
                 tone="un"
                 className="aspect-[4/5] w-full"
               />
-              <div className="absolute -bottom-6 -left-6 hidden md:block bg-celik text-un-soft px-6 py-5 max-w-[13rem]">
-                <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-safran-soft">
+              <div className="absolute -bottom-6 -left-6 hidden md:block bg-lacivert text-un-soft px-6 py-5 max-w-[13rem]">
+                <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-kirmizi">
                   Kuruluş
                 </p>
                 <p className="mt-1.5 text-sm leading-snug text-un-soft/80">

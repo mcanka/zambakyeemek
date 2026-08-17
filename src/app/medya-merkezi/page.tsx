@@ -7,7 +7,7 @@ import { NEWS } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Medya Merkezi",
-  description: "Mekaş Yemek Sanayi'nden güncel haberler, basın bültenleri ve duyurular.",
+  description: "Zirve Yemek'ten güncel haberler, basın bültenleri ve duyurular.",
 };
 
 const formatter = new Intl.DateTimeFormat("tr-TR", { day: "2-digit", month: "long", year: "numeric" });
@@ -17,7 +17,7 @@ export default function MedyaMerkeziPage() {
     <>
       <PageHero
         eyebrow="Medya Merkezi"
-        title="Mekaş'tan güncel haberler ve duyurular."
+        title="Zirve Yemek'ten güncel haberler ve duyurular."
         description="Üretim tesisimizden, sektörel gelişmelerden ve kurumsal faaliyetlerimizden haberler."
         imageLabel="Basın Arşivi — Yer Tutucu"
       />

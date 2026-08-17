@@ -11,7 +11,7 @@ import { CERTIFICATIONS, PRODUCTION_STEPS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Üretim",
   description:
-    "Mekaş Yemek Sanayi üretim tesisi, teknolojik altyapısı, hijyen standartları ve kalite belgeleri hakkında bilgi edinin.",
+    "Zirve Yemek üretim tesisi, teknolojik altyapısı, hijyen standartları ve kalite belgeleri hakkında bilgi edinin.",
 };
 
 export default function UretimPage() {
@@ -36,7 +36,7 @@ export default function UretimPage() {
             {PRODUCTION_STEPS.map((step, i) => (
               <Reveal key={step.step} delay={i * 90}>
                 <div className="border rule-light p-8 h-full">
-                  <span className="font-mono text-2xl text-biber">{step.step}</span>
+                  <span className="font-mono text-2xl text-kirmizi">{step.step}</span>
                   <h3 className="mt-4 font-display text-xl text-komur">{step.title}</h3>
                   <p className="mt-2 text-komur/65 leading-relaxed">{step.description}</p>
                 </div>
@@ -46,13 +46,13 @@ export default function UretimPage() {
         </Container>
       </section>
 
-      <section className="bg-celik texture-steel py-20 md:py-28">
+      <section className="bg-lacivert texture-steel py-20 md:py-28">
         <Container>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
             <Reveal>
               <Placeholder
                 label="Hijyen Uygulamaları — Yer Tutucu"
-                alt="Mekaş hijyen ve kalite kontrol"
+                alt="Zirve Yemek hijyen ve kalite kontrol"
                 tone="steel"
                 className="aspect-[4/5] w-full border border-un-soft/10"
               />

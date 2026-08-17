@@ -5,7 +5,7 @@ import { STATS } from "@/lib/data";
 
 export function StatsBand() {
   return (
-    <section className="bg-celik texture-steel">
+    <section className="bg-lacivert texture-steel">
       <Container className="py-14 md:py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-y-10">
           {STATS.map((stat, i) => (
@@ -14,7 +14,7 @@ export function StatsBand() {
               delay={i * 90}
               className={`px-1 md:px-8 ${i > 0 ? "border-l rule-dark" : ""}`}
             >
-              <div className="flex items-baseline gap-1 font-mono text-safran-soft">
+              <div className="flex items-baseline gap-1 font-mono text-kirmizi">
                 {stat.unit === "m" ? (
                   <span className="text-2xl md:text-3xl">m</span>
                 ) : null}

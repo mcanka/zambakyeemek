@@ -27,7 +27,7 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.mekasyemek.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.zirveyemek.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,18 +36,18 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY.name}`,
   },
   description:
-    "Mekaş Yemek Sanayi; Bursa Hilaller OSB'deki tesisinde eğitim, kamu ve sanayi kuruluşlarına günlük 30.000 öğün kapasiteyle güvenilir, hijyenik ve zamanında toplu yemek üretimi ve taşıma yemek servisi sunar.",
+    "Zirve Yemek Catering; eğitim, kamu ve sanayi kuruluşlarına günlük binlerce öğün kapasiteyle güvenilir, hijyenik ve zamanında toplu yemek üretimi ve taşıma yemek servisi sunar.",
   keywords: [
     "toplu yemek üretimi",
     "taşıma yemek servisi",
-    "kurumsal catering Bursa",
-    "Mekaş Yemek Sanayi",
+    "kurumsal catering",
+    "Zirve Yemek",
     "fabrika yemekhane hizmeti",
   ],
   openGraph: {
     title: `${COMPANY.name} | Endüstriyel Toplu Yemek Üretimi`,
     description:
-      "Bursa Hilaller OSB'de günlük 30.000 öğün üretim kapasitesiyle, eğitim, kamu ve sanayi kuruluşlarına hijyenik ve zamanında yemek hizmeti.",
+      "Günlük binlerce öğün üretim kapasitesiyle, eğitim, kamu ve sanayi kuruluşlarına hijyenik ve zamanında yemek hizmeti.",
     url: siteUrl,
     siteName: COMPANY.name,
     locale: "tr_TR",
@@ -57,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${COMPANY.name} | Endüstriyel Toplu Yemek Üretimi`,
     description:
-      "Bursa Hilaller OSB'de günlük 30.000 öğün üretim kapasitesiyle hijyenik ve zamanında toplu yemek hizmeti.",
+      "Günlük binlerce öğün üretim kapasitesiyle hijyenik ve zamanında toplu yemek hizmeti.",
   },
   alternates: {
     canonical: siteUrl,
@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#1e2b30",
+  themeColor: "#343246",
   width: "device-width",
   initialScale: 1,
 };
@@ -84,7 +84,7 @@ export default function RootLayout({
       <body className="antialiased">
         <a
           href="#icerik"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-biber focus:text-un-soft focus:px-4 focus:py-2 focus:text-sm"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-kirmizi focus:text-un-soft focus:px-4 focus:py-2 focus:text-sm"
         >
           İçeriğe geç
         </a>

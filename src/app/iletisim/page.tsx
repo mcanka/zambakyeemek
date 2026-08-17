@@ -6,7 +6,7 @@ import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "İletişim",
-  description: "Mekaş Yemek Sanayi ile iletişime geçin — adres, telefon, e-posta ve iletişim formu.",
+  description: "Zirve Yemek ile iletişime geçin — adres, telefon, e-posta ve iletişim formu.",
 };
 
 export default function IletisimPage() {
@@ -31,7 +31,7 @@ export default function IletisimPage() {
 
             <div className="space-y-10">
               <div>
-                <p className="font-mono text-xs tracking-[0.18em] uppercase text-biber mb-4">Adres</p>
+                <p className="font-mono text-xs tracking-[0.18em] uppercase text-kirmizi mb-4">Adres</p>
                 <address className="not-italic text-komur/75 leading-relaxed">
                   {COMPANY.legalName}
                   <br />
@@ -41,14 +41,14 @@ export default function IletisimPage() {
 
               <div className="grid grid-cols-2 gap-6">
                 <div>
-                  <p className="font-mono text-xs tracking-[0.18em] uppercase text-biber mb-3">Telefon</p>
-                  <a href={`tel:${COMPANY.phoneHref}`} className="text-komur/75 hover:text-biber transition-colors">
+                  <p className="font-mono text-xs tracking-[0.18em] uppercase text-kirmizi mb-3">Telefon</p>
+                  <a href={`tel:${COMPANY.phoneHref}`} className="text-komur/75 hover:text-kirmizi transition-colors">
                     {COMPANY.phoneDisplay}
                   </a>
                 </div>
                 <div>
-                  <p className="font-mono text-xs tracking-[0.18em] uppercase text-biber mb-3">E-posta</p>
-                  <a href={`mailto:${COMPANY.email}`} className="text-komur/75 hover:text-biber transition-colors break-all">
+                  <p className="font-mono text-xs tracking-[0.18em] uppercase text-kirmizi mb-3">E-posta</p>
+                  <a href={`mailto:${COMPANY.email}`} className="text-komur/75 hover:text-kirmizi transition-colors break-all">
                     {COMPANY.email}
                   </a>
                 </div>
