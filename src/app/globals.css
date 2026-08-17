@@ -1,0 +1,141 @@
+@import "tailwindcss";
+
+/*
+  Tasarım token sistemi — "Buhar & Çelik" (Steam & Steel)
+  Un (un beyazı) + Çelik (paslanmaz çelik) + Safran + Biber (paprika) + Zeytin
+  Endüstriyel toplu yemek üretiminin dünyasından: buhar, çelik tezgah,
+  baharat, soğuk zincir ve tarım. Mekaş referans sitesinin kırmızı/lacivert
+  kurumsal şablonundan bilinçli olarak ayrışır.
+*/
+@theme inline {
+  --color-un: #f4efe4;
+  --color-un-soft: #faf7f0;
+  --color-un-line: #e4dbc8;
+
+  --color-celik: #1e2b30;
+  --color-celik-2: #141e22;
+  --color-celik-soft: #2a3a40;
+
+  --color-safran: #e2a530;
+  --color-safran-soft: #f0c874;
+
+  --color-biber: #c14a24;
+  --color-biber-dark: #9a3a1c;
+
+  --color-zeytin: #5c6b4c;
+  --color-zeytin-soft: #7c8c68;
+  --color-zeytin-2: #3f4a35;
+
+  --color-komur: #171e1f;
+
+  --font-display: var(--font-fraunces);
+  --font-body: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+}
+
+:root {
+  --background: var(--color-un);
+  --foreground: var(--color-komur);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+::selection {
+  background: var(--color-biber);
+  color: var(--color-un-soft);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-biber);
+  outline-offset: 3px;
+}
+
+/*
+  Tailwind v4 gives unlayered CSS (anything outside @layer) unconditional
+  priority over its own @layer utilities — including .fixed/.absolute.
+  These helper classes are wrapped in @layer components so real utility
+  classes (e.g. a "fixed" overlay) can still override them as expected.
+*/
+@layer components {
+  .font-display {
+    font-family: var(--font-display), ui-serif, Georgia, serif;
+  }
+
+  .font-mono {
+    font-family: var(--font-mono), ui-monospace, monospace;
+  }
+
+  /* Grain/texture overlay used on dark steel sections for tactile depth */
+  .texture-steel {
+    position: relative;
+    isolation: isolate;
+  }
+  .texture-steel::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    background-image:
+      repeating-linear-gradient(
+        115deg,
+        rgba(244, 239, 228, 0.035) 0px,
+        rgba(244, 239, 228, 0.035) 1px,
+        transparent 1px,
+        transparent 3px
+      );
+  }
+  .texture-steel > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Reveal-on-scroll primitive, progressively enhanced via JS toggling data-visible */
+  .reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  .reveal[data-visible="true"] {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  @media (prefers-reduced-motion: reduce) {
+    .reveal {
+      opacity: 1;
+      transform: none;
+      transition: none;
+    }
+  }
+
+  /* Hairline dividers */
+  .rule-light {
+    border-color: var(--color-un-line);
+  }
+  .rule-dark {
+    border-color: rgba(244, 239, 228, 0.16);
+  }
+}
