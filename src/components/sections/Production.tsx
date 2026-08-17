@@ -22,9 +22,11 @@ export function Production() {
           <Reveal delay={100}>
             <Placeholder
               label="Üretim Hattı — Yer Tutucu"
-              alt="Zirve Yemek üretim tesisi"
+              src="/images/mutfak-ekip.jpg"
+              alt="Zirve Yemek üretim ekibi"
               tone="steel"
               className="aspect-[4/5] w-full border border-un-soft/10"
+              sizes="(min-width: 1024px) 45vw, 100vw"
             />
           </Reveal>
 

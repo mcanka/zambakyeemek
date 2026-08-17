@@ -22,6 +22,7 @@ export default function HakkimizdaPage() {
         title="Sanayi disipliniyle, ev sıcaklığında yemek üretiyoruz."
         description={`${COMPANY.name}, modern üretim tesisinde endüstriyel ölçekte gerçek lezzeti üretme vizyonuyla çalışır.`}
         imageLabel="Tesis Girişi — Yer Tutucu"
+        image="/images/mutfak-ekip.jpg"
       />
 
       <section className="bg-un-soft py-20 md:py-28">
@@ -30,9 +31,11 @@ export default function HakkimizdaPage() {
             <Reveal>
               <Placeholder
                 label="Kurumsal Bina — Yer Tutucu"
+                src="/images/tesis-bina.jpg"
                 alt={`${COMPANY.name} kurumsal binası`}
                 tone="un"
                 className="aspect-[4/5] w-full"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </Reveal>
             <Reveal delay={100}>

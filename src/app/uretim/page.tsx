@@ -22,6 +22,7 @@ export default function UretimPage() {
         title="Modern tesisimizde, dünya standartlarında üretim."
         description="Yatırdığımız teknolojik yatırımlar ve deneyimli ekibimizle, hijyenden ödün vermeden yüksek kapasiteli üretim gerçekleştiriyoruz."
         imageLabel="Üretim Hattı Genel Görünüm — Yer Tutucu"
+        image="/images/mutfak-ekip.jpg"
       />
 
       <section className="bg-un-soft py-20 md:py-28">
@@ -52,9 +53,11 @@ export default function UretimPage() {
             <Reveal>
               <Placeholder
                 label="Hijyen Uygulamaları — Yer Tutucu"
+                src="/images/ekipman-detay.jpg"
                 alt="Zirve Yemek hijyen ve kalite kontrol"
                 tone="steel"
                 className="aspect-[4/5] w-full border border-un-soft/10"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
             </Reveal>
             <Reveal delay={100}>

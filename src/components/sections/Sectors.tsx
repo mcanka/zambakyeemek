@@ -6,6 +6,11 @@ import { SECTORS } from "@/lib/data";
 
 const TONES = ["steel", "kirmizi", "yesil"] as const;
 
+const SECTOR_IMAGES: Record<string, string> = {
+  "egitim-kurumlari": "/images/egitim-kurumlari.jpg",
+  "kamu-kurumlari": "/images/kamu-kurumlari.jpg",
+};
+
 export function Sectors() {
   return (
     <section className="bg-un-soft py-20 md:py-28">
@@ -24,9 +29,11 @@ export function Sectors() {
               <div className="group relative aspect-[3/4] overflow-hidden">
                 <Placeholder
                   label={`${sector.title} — Yer Tutucu`}
+                  src={SECTOR_IMAGES[sector.slug]}
                   alt={sector.title}
                   tone={TONES[i % TONES.length]}
                   className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
+                  sizes="(min-width: 640px) 33vw, 100vw"
                 />
                 <div
                   aria-hidden

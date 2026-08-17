@@ -22,9 +22,16 @@ export function Placeholder({
   sizes?: string;
   priority?: boolean;
 }) {
+  // Bir üst pozisyon utility'si (absolute/fixed/sticky) zaten className içinde
+  // geliyorsa, kendi "relative" değerimizi eklemiyoruz — aynı elemanda ikisi
+  // birden bulunursa Tailwind'in "relative" kuralı kazanıp sarmalayıcıyı
+  // inset-0'ı yok sayan, yüksekliği 0'a çöken bir kutuya dönüştürüyor.
+  const isPositioned = /\b(absolute|fixed|sticky)\b/.test(className);
+  const positionClass = isPositioned ? "" : "relative";
+
   if (src) {
     return (
-      <div className={`relative overflow-hidden ${className}`}>
+      <div className={`${positionClass} overflow-hidden ${className}`}>
         <Image
           src={src}
           alt={alt}
@@ -46,7 +53,7 @@ export function Placeholder({
 
   return (
     <div
-      className={`relative overflow-hidden flex items-end p-5 ${toneClasses[tone]} ${className}`}
+      className={`${positionClass} overflow-hidden flex items-end p-5 ${toneClasses[tone]} ${className}`}
       role="img"
       aria-label={alt || label}
     >

@@ -8,15 +8,17 @@ export function PageHero({
   title,
   description,
   imageLabel,
+  image,
 }: {
   eyebrow: string;
   title: ReactNode;
   description?: string;
   imageLabel: string;
+  image?: string;
 }) {
   return (
     <section className="relative overflow-hidden bg-lacivert">
-      <Placeholder label={imageLabel} tone="steel" className="absolute inset-0" priority />
+      <Placeholder label={imageLabel} src={image} tone="steel" className="absolute inset-0" priority />
       <div aria-hidden className="absolute inset-0 bg-gradient-to-r from-lacivert via-lacivert/88 to-lacivert/60" />
 
       <Container className="relative pt-16 pb-16 md:pt-24 md:pb-20">

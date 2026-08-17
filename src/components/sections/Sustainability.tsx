@@ -9,6 +9,7 @@ export function Sustainability() {
     <section className="relative overflow-hidden bg-yesil-2">
       <Placeholder
         label="Tarım Arazisi — Yer Tutucu"
+        src="/images/tarim-arazisi.jpg"
         alt="Sürdürülebilirlik — tarladan sofraya"
         tone="yesil"
         className="absolute inset-0"

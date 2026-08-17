@@ -40,9 +40,11 @@ export function About() {
             <div className="relative">
               <Placeholder
                 label="Tesis Binası — Yer Tutucu"
+                src="/images/tesis-bina.jpg"
                 alt={`${COMPANY.name} tesis binası`}
                 tone="un"
                 className="aspect-[4/5] w-full"
+                sizes="(min-width: 1024px) 50vw, 100vw"
               />
               <div className="absolute -bottom-6 -left-6 hidden md:block bg-lacivert text-un-soft px-6 py-5 max-w-[13rem]">
                 <p className="font-mono text-[11px] tracking-[0.16em] uppercase text-kirmizi">

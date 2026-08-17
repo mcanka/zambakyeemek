@@ -13,6 +13,7 @@ export function Hero() {
     <section className="relative overflow-hidden bg-lacivert">
       <Placeholder
         label="Tesis Fotoğrafı — Yer Tutucu"
+        src="/images/ekipman-detay.jpg"
         alt="Zirve Yemek üretim tesisi"
         tone="steel"
         className="absolute inset-0"
@@ -37,7 +38,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[1.03] tracking-tight text-un-soft max-w-2xl">
-                Gerçek lezzeti <em className="italic text-kirmizi">endüstriyel</em> ölçekle buluşturuyoruz.
+                Gerçek lezzeti <em className="italic text-kirmizi">zirveye</em> taşıyoruz.
               </h1>
             </Reveal>
             <Reveal delay={160}>

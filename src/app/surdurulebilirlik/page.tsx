@@ -34,6 +34,7 @@ export default function SurdurulebilirlikPage() {
         title="Tarladan başlayan sorumluluk, sofrada tamamlanır."
         description="Sürdürülebilirliği; insan, toplum ve çevre eksenlerinde bütünsel bir sorumluluk olarak ele alıyoruz."
         imageLabel="Tarım Arazisi — Yer Tutucu"
+        image="/images/tarim-arazisi.jpg"
       />
 
       <section className="bg-un-soft py-20 md:py-28">

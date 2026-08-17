@@ -13,6 +13,9 @@ export const metadata: Metadata = {
 };
 
 const TONES = ["steel", "kirmizi", "yesil"] as const;
+const SERVICE_IMAGES: Record<string, string> = {
+  "kurumsal-catering": "/images/mutfak-ekip.jpg",
+};
 
 export default function HizmetlerimizPage() {
   return (
@@ -39,9 +42,11 @@ export default function HizmetlerimizPage() {
               <Reveal>
                 <Placeholder
                   label={`${service.title} — Yer Tutucu`}
+                  src={SERVICE_IMAGES[service.slug]}
                   alt={service.title}
                   tone={TONES[i % TONES.length]}
                   className="aspect-[4/3] w-full"
+                  sizes="(min-width: 1024px) 50vw, 100vw"
                 />
               </Reveal>
               <Reveal delay={100}>

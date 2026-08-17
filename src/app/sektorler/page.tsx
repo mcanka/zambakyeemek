@@ -13,6 +13,10 @@ export const metadata: Metadata = {
 };
 
 const TONES = ["steel", "kirmizi", "yesil"] as const;
+const SECTOR_IMAGES: Record<string, string> = {
+  "egitim-kurumlari": "/images/egitim-kurumlari.jpg",
+  "kamu-kurumlari": "/images/kamu-kurumlari.jpg",
+};
 
 export default function SektorlerPage() {
   return (
@@ -32,9 +36,11 @@ export default function SektorlerPage() {
                 <div id={sector.slug} className="scroll-mt-24 grid grid-cols-1 md:grid-cols-[1fr_1.4fr] gap-6 md:gap-10 border rule-light p-7 md:p-10 items-center">
                   <Placeholder
                     label={`${sector.title} — Yer Tutucu`}
+                    src={SECTOR_IMAGES[sector.slug]}
                     alt={sector.title}
                     tone={TONES[i % TONES.length]}
                     className="aspect-[16/10] w-full"
+                    sizes="(min-width: 768px) 40vw, 100vw"
                   />
                   <div>
                     <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">
