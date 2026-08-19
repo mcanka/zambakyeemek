@@ -81,7 +81,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="text-un-soft/50 hover:text-kirmizi transition-colors font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-kirmizi/50 px-2.5 py-1.5"
+                  className="text-un-soft/50 hover:text-un-soft transition-all duration-200 ease-out font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-kirmizi hover:bg-kirmizi hover:-translate-y-0.5 px-2.5 py-1.5"
                 >
                   {s.label.slice(0, 2)}
                 </a>

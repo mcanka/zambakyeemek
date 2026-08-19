@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Placeholder } from "@/components/ui/Placeholder";
@@ -26,13 +27,16 @@ export function Sectors() {
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-5">
           {SECTORS.map((sector, i) => (
             <Reveal key={sector.slug} delay={i * 110}>
-              <div className="group relative aspect-[3/4] overflow-hidden">
+              <Link
+                href={`/sektorler#${sector.slug}`}
+                className="group relative block aspect-[3/4] overflow-hidden transition-[transform,box-shadow] duration-300 ease-out hover:-translate-y-1.5 hover:shadow-[0_24px_48px_-20px_rgba(20,17,30,0.55)]"
+              >
                 <Placeholder
                   label={`${sector.title} — Yer Tutucu`}
                   src={SECTOR_IMAGES[sector.slug]}
                   alt={sector.title}
                   tone={TONES[i % TONES.length]}
-                  className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
+                  className="absolute inset-0 transition-transform duration-500 ease-out group-hover:scale-105"
                   sizes="(min-width: 640px) 33vw, 100vw"
                 />
                 <div
@@ -49,8 +53,14 @@ export function Sectors() {
                   <p className="mt-2 text-sm text-un-soft/70 leading-relaxed">
                     {sector.description}
                   </p>
+                  <span className="mt-3 inline-flex items-center gap-1.5 text-xs font-medium text-un-soft/0 transition-all duration-300 group-hover:text-un-soft/90">
+                    İncele
+                    <span aria-hidden className="transition-transform duration-300 -translate-x-1 group-hover:translate-x-0">
+                      →
+                    </span>
+                  </span>
                 </div>
-              </div>
+              </Link>
             </Reveal>
           ))}
         </div>
