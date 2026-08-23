@@ -1,11 +1,12 @@
 "use client";
 
 import { FormEvent, useState } from "react";
+import { SERVICES } from "@/lib/data";
 
 type Status = "idle" | "submitting" | "success" | "error";
 
 const FIELD_CLASS =
-  "w-full bg-transparent border-b rule-light py-3 text-komur placeholder:text-komur/35 focus:border-kirmizi transition-colors outline-none";
+  "w-full bg-un rounded-md border border-un-line px-4 py-3 text-sm text-komur placeholder:text-komur/40 focus:border-kirmizi focus:outline-none transition-colors";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -23,12 +24,13 @@ export function ContactForm() {
     }
 
     const name = String(data.get("name") ?? "").trim();
+    const phone = String(data.get("phone") ?? "").trim();
     const email = String(data.get("email") ?? "").trim();
     const message = String(data.get("message") ?? "").trim();
 
-    if (!name || !email || !message) {
+    if (!name || !phone || !email || !message) {
       setStatus("error");
-      setErrorMessage("Lütfen ad soyad, e-posta ve mesaj alanlarını doldurun.");
+      setErrorMessage("Lütfen ad soyad, telefon, e-posta ve mesaj alanlarını doldurun.");
       return;
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -46,9 +48,11 @@ export function ContactForm() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
           name,
+          phone,
           email,
-          phone: String(data.get("phone") ?? ""),
-          company: String(data.get("company") ?? ""),
+          serviceType: String(data.get("serviceType") ?? ""),
+          guestCount: String(data.get("guestCount") ?? ""),
+          address: String(data.get("address") ?? ""),
           message,
         }),
       });
@@ -71,20 +75,20 @@ export function ContactForm() {
 
   if (status === "success") {
     return (
-      <div className="border rule-light p-8 md:p-10">
+      <div className="border rule-light rounded-md p-8 md:p-10 bg-un">
         <p className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Alındı</p>
         <p className="mt-4 font-display text-2xl text-komur leading-snug">
           Mesajınız için teşekkürler.
         </p>
         <p className="mt-2 text-komur/65 leading-relaxed">
-          Ekibimiz en kısa sürede size dönüş yapacaktır.
+          Danışmanlarımız en kısa sürede sizinle irtibata geçecektir.
         </p>
       </div>
     );
   }
 
   return (
-    <form onSubmit={handleSubmit} noValidate className="space-y-7">
+    <form onSubmit={handleSubmit} noValidate className="space-y-4">
       <input
         type="text"
         name="website"
@@ -94,39 +98,67 @@ export function ContactForm() {
         aria-hidden="true"
       />
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-7">
-        <div>
-          <label htmlFor="name" className="block text-xs font-mono tracking-wide uppercase text-komur/50 mb-2">
-            Ad Soyad *
-          </label>
-          <input id="name" name="name" type="text" required autoComplete="name" className={FIELD_CLASS} />
-        </div>
-        <div>
-          <label htmlFor="company" className="block text-xs font-mono tracking-wide uppercase text-komur/50 mb-2">
-            Kurum
-          </label>
-          <input id="company" name="company" type="text" autoComplete="organization" className={FIELD_CLASS} />
-        </div>
-        <div>
-          <label htmlFor="email" className="block text-xs font-mono tracking-wide uppercase text-komur/50 mb-2">
-            E-posta *
-          </label>
-          <input id="email" name="email" type="email" required autoComplete="email" className={FIELD_CLASS} />
-        </div>
-        <div>
-          <label htmlFor="phone" className="block text-xs font-mono tracking-wide uppercase text-komur/50 mb-2">
-            Telefon
-          </label>
-          <input id="phone" name="phone" type="tel" autoComplete="tel" className={FIELD_CLASS} />
-        </div>
-      </div>
+      <input
+        name="name"
+        type="text"
+        required
+        autoComplete="name"
+        placeholder="Ad Soyad"
+        className={FIELD_CLASS}
+      />
 
-      <div>
-        <label htmlFor="message" className="block text-xs font-mono tracking-wide uppercase text-komur/50 mb-2">
-          Mesajınız *
-        </label>
-        <textarea id="message" name="message" required rows={5} className={`${FIELD_CLASS} resize-none`} />
-      </div>
+      <input
+        name="phone"
+        type="tel"
+        required
+        autoComplete="tel"
+        placeholder="Telefon No"
+        className={FIELD_CLASS}
+      />
+
+      <select name="serviceType" defaultValue="" className={`${FIELD_CLASS} text-komur/70`}>
+        <option value="">Hizmet Türü</option>
+        {SERVICES.map((service) => (
+          <option key={service.slug} value={service.title}>
+            {service.title}
+          </option>
+        ))}
+        <option value="Diğer">Diğer</option>
+      </select>
+
+      <input
+        name="guestCount"
+        type="number"
+        min={1}
+        inputMode="numeric"
+        placeholder="Kişi Sayısı"
+        className={FIELD_CLASS}
+      />
+
+      <input
+        name="address"
+        type="text"
+        autoComplete="street-address"
+        placeholder="Teslimat Adresi"
+        className={FIELD_CLASS}
+      />
+
+      <input
+        name="email"
+        type="email"
+        required
+        autoComplete="email"
+        placeholder="E-mail"
+        className={FIELD_CLASS}
+      />
+
+      <textarea
+        name="message"
+        required
+        rows={5}
+        placeholder="Mesajınız"
+        className={`${FIELD_CLASS} resize-none`}
+      />
 
       {status === "error" ? (
         <p role="alert" className="text-sm text-kirmizi">
@@ -134,12 +166,16 @@ export function ContactForm() {
         </p>
       ) : null}
 
+      <p className="text-xs text-komur/50 leading-relaxed">
+        *Kişisel bilgileriniz üçüncü taraf yazılım ve şahıslarla paylaşılmayacaktır.
+      </p>
+
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center gap-2.5 bg-kirmizi text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide hover:bg-kirmizi-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="inline-flex items-center gap-2.5 bg-kirmizi text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide rounded-md hover:bg-kirmizi-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
-        {status === "submitting" ? "Gönderiliyor…" : "Mesajı Gönder"}
+        {status === "submitting" ? "Gönderiliyor…" : "Gönder"}
       </button>
     </form>
   );

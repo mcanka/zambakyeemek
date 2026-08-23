@@ -30,7 +30,7 @@ export function Footer() {
               Site Haritası
             </p>
             <ul className="space-y-2.5">
-              {FOOTER_LINKS.slice(0, 5).map((link) => (
+              {FOOTER_LINKS.slice(0, 3).map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-un-soft/70 hover:text-un-soft transition-colors">
                     {link.label}
@@ -45,7 +45,7 @@ export function Footer() {
               &nbsp;
             </p>
             <ul className="space-y-2.5">
-              {FOOTER_LINKS.slice(5).map((link) => (
+              {FOOTER_LINKS.slice(3).map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-sm text-un-soft/70 hover:text-un-soft transition-colors">
                     {link.label}

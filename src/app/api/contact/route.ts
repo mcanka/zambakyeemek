@@ -5,9 +5,11 @@ export const runtime = "nodejs";
 
 type ContactPayload = {
   name?: string;
-  email?: string;
   phone?: string;
-  company?: string;
+  serviceType?: string;
+  guestCount?: string;
+  address?: string;
+  email?: string;
   message?: string;
 };
 
@@ -30,14 +32,16 @@ export async function POST(request: Request) {
   }
 
   const name = (payload.name ?? "").trim();
-  const email = (payload.email ?? "").trim();
   const phone = (payload.phone ?? "").trim();
-  const company = (payload.company ?? "").trim();
+  const serviceType = (payload.serviceType ?? "").trim();
+  const guestCount = (payload.guestCount ?? "").trim();
+  const address = (payload.address ?? "").trim();
+  const email = (payload.email ?? "").trim();
   const message = (payload.message ?? "").trim();
 
-  if (!name || !email || !message) {
+  if (!name || !phone || !email || !message) {
     return NextResponse.json(
-      { ok: false, message: "Ad soyad, e-posta ve mesaj alanları zorunludur." },
+      { ok: false, message: "Ad soyad, telefon, e-posta ve mesaj alanları zorunludur." },
       { status: 400 }
     );
   }
@@ -51,7 +55,7 @@ export async function POST(request: Request) {
   if (!apiKey) {
     console.warn(
       "[iletisim] RESEND_API_KEY tanımlı değil — form isteği yalnızca kaydedildi, e-posta gönderilmedi.",
-      { name, email, phone, company }
+      { name, phone, serviceType, guestCount, address, email }
     );
     return NextResponse.json(
       {
@@ -77,9 +81,11 @@ export async function POST(request: Request) {
         subject: `Web sitesi iletişim formu — ${name}`,
         html: `
           <p><strong>Ad Soyad:</strong> ${escapeHtml(name)}</p>
-          <p><strong>Kurum:</strong> ${escapeHtml(company || "-")}</p>
+          <p><strong>Telefon:</strong> ${escapeHtml(phone)}</p>
           <p><strong>E-posta:</strong> ${escapeHtml(email)}</p>
-          <p><strong>Telefon:</strong> ${escapeHtml(phone || "-")}</p>
+          <p><strong>Hizmet Türü:</strong> ${escapeHtml(serviceType || "-")}</p>
+          <p><strong>Kişi Sayısı:</strong> ${escapeHtml(guestCount || "-")}</p>
+          <p><strong>Adres:</strong> ${escapeHtml(address || "-")}</p>
           <p><strong>Mesaj:</strong></p>
           <p>${escapeHtml(message).replace(/\n/g, "<br />")}</p>
         `,

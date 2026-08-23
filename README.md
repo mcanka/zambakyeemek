@@ -91,5 +91,4 @@ embed yöntemiyle çalışır; ek yapılandırma gerekmez.
 - Güncel kapasite/personel rakamları (şu an illüstratif örnek değerler)
 - Gerçek sertifika görselleri (ISO, HACCP vb.)
 - Gerçek iştirak/grup şirketi adları ve logoları (şu an örnek/placeholder isimler)
-- Medya Merkezi için gerçek haber başlıkları (şu an örnek/placeholder içerik)
 - Resend hesabı ve doğrulanmış gönderen alan adı (iletişim formu için)

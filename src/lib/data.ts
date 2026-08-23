@@ -26,9 +26,6 @@ export const NAV_LINKS = [
   { href: "/", label: "Anasayfa" },
   { href: "/hakkimizda", label: "Hakkımızda" },
   { href: "/hizmetlerimiz", label: "Hizmetlerimiz" },
-  { href: "/sektorler", label: "Sektörler" },
-  { href: "/uretim", label: "Üretim" },
-  { href: "/medya-merkezi", label: "Medya Merkezi" },
   { href: "/surdurulebilirlik", label: "Sürdürülebilirlik" },
   { href: "/iletisim", label: "İletişim" },
 ] as const;
@@ -73,50 +70,6 @@ export const SERVICES = [
   },
 ] as const;
 
-export const SECTORS = [
-  {
-    slug: "egitim-kurumlari",
-    title: "Eğitim Kurumları",
-    description:
-      "Okul öncesinden yükseköğretime, öğrenci gelişimini destekleyen dengeli ve kontrollü porsiyonlu menüler.",
-  },
-  {
-    slug: "kamu-kurumlari",
-    title: "Kamu Kurumları",
-    description:
-      "Kamu kurum ve kuruluşlarının yemekhanelerinde, mevzuata uygun şeffaf ve denetlenebilir üretim süreci.",
-  },
-  {
-    slug: "sanayi-kuruluslari",
-    title: "Sanayi Kuruluşları",
-    description:
-      "Vardiya düzeninde çalışan fabrika ve tesislerde, yüksek kapasiteli ve zamanında teslimat garantili servis.",
-  },
-] as const;
-
-export const PRODUCTION_STEPS = [
-  {
-    step: "01",
-    title: "Tedarik ve Kabul",
-    description: "Girdi kontrolü ve numune analizleriyle onaylı tedarikçilerden gelen ham maddenin kabulü.",
-  },
-  {
-    step: "02",
-    title: "Hazırlık",
-    description: "Hijyen standartlarına uygun alanlarda yıkama, ayıklama ve porsiyonlama öncesi hazırlık.",
-  },
-  {
-    step: "03",
-    title: "Üretim",
-    description: "Endüstriyel mutfak ekipmanlarında, kritik kontrol noktaları izlenerek pişirme süreci.",
-  },
-  {
-    step: "04",
-    title: "Soğuk Zincir",
-    description: "Sıcaklık kaydı sürekli tutularak, soğutmalı araç filosuyla güvenli taşıma ve teslimat.",
-  },
-] as const;
-
 export const CERTIFICATIONS = [
   "ISO 9001", // TODO: mevcut sertifikalarla teyit edilmeli
   "ISO 22000",
@@ -130,30 +83,6 @@ export const RECIPE_CARD = {
   calorie: "612 kcal", // TODO: gerçek değer ile teyit edilmeli
   category: "Yemek Tarifleri",
 } as const;
-
-export const NEWS = [
-  {
-    slug: "soguk-zincir-yatirimi",
-    title: "Soğuk zincir filomuzu yeniliyoruz",
-    excerpt:
-      "Taşıma sürecinde sıcaklık güvenliğini daha da artırmak için filoya yeni soğutmalı araçlar katıyoruz.",
-    date: "2026-06-12",
-  },
-  {
-    slug: "hijyen-semineri",
-    title: "Eğitim kurumlarına hijyen ve beslenme semineri",
-    excerpt:
-      "Hizmet verdiğimiz okullarda gıda güvenliği ve dengeli beslenme konulu bilgilendirme seminerleri düzenledik.",
-    date: "2026-05-03",
-  },
-  {
-    slug: "haccp-denetimi",
-    title: "Üretim tesisimizde HACCP yenileme denetimi tamamlandı",
-    excerpt:
-      "Gıda güvenliği yönetim sistemimiz, bağımsız denetim kuruluşu tarafından yeniden belgelendirildi.",
-    date: "2026-03-21",
-  },
-] as const;
 
 // TODO: örnek/placeholder isimlerdir — gerçek iştirak adları ve logolarıyla değiştirilmeli
 export const PARTNERS = [
