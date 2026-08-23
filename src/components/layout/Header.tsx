@@ -31,9 +31,9 @@ export function Header() {
           scrolled ? "h-16" : "h-20"
         }`}
       >
-        <Logo tone="dark" />
+        <Logo tone="dark" imgClassName="h-12 md:h-14 w-auto" />
 
-        <nav className="hidden lg:flex items-center gap-5 xl:gap-7" aria-label="Ana menü">
+        <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Ana menü">
           {NAV_LINKS.map((link) => {
             const active = pathname === link.href;
             return (
@@ -41,17 +41,11 @@ export function Header() {
                 key={link.href}
                 href={link.href}
                 aria-current={active ? "page" : undefined}
-                className={`group relative whitespace-nowrap py-1 text-[13.5px] font-medium transition-colors duration-200 ${
-                  active ? "text-un-soft" : "text-un-soft/70 hover:text-un-soft"
+                className={`whitespace-nowrap rounded-md px-3 py-2 text-[13.5px] font-medium transition-colors duration-200 ease-out hover:bg-kirmizi hover:text-un-soft ${
+                  active ? "text-un-soft" : "text-un-soft/70"
                 }`}
               >
                 {link.label}
-                <span
-                  aria-hidden
-                  className={`absolute inset-x-0 -bottom-0.5 h-px origin-left scale-x-0 bg-kirmizi transition-transform duration-300 ease-out group-hover:scale-x-100 ${
-                    active ? "scale-x-100" : ""
-                  }`}
-                />
               </Link>
             );
           })}

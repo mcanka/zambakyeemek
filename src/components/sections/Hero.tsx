@@ -38,7 +38,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[1.03] tracking-tight text-un-soft max-w-2xl">
-                Gerçek lezzeti <em className="italic text-kirmizi">zirveye</em> taşıyoruz.
+                Lezzetin <em className="italic text-kirmizi">zirvesi</em>, hizmetin güvencesi.
               </h1>
             </Reveal>
             <Reveal delay={160}>

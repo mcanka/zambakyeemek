@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
+export function Logo({
+  tone = "dark",
+  imgClassName = "h-9 md:h-10 w-auto",
+}: {
+  tone?: "dark" | "light";
+  imgClassName?: string;
+}) {
   const isDark = tone === "dark";
 
   return (
@@ -17,7 +23,7 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
           width={1676}
           height={1010}
           priority
-          className="h-9 md:h-10 w-auto"
+          className={imgClassName}
         />
       ) : (
         <span className="inline-flex items-baseline gap-2">
