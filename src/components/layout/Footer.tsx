@@ -16,7 +16,7 @@ export function Footer() {
 
   return (
     <footer className="bg-lacivert-2 texture-steel">
-      <Container className="py-16 md:py-20">
+      <Container className="pt-16 md:pt-20">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1.1fr] gap-12 md:gap-8">
           <div>
             <Logo tone="dark" />
@@ -95,18 +95,21 @@ export function Footer() {
           <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
             Konumumuz
           </p>
-          <div className="aspect-[16/5] w-full border rule-dark overflow-hidden">
-            <iframe
-              title="Zirve Yemek konum haritası"
-              src={mapSrc}
-              className="w-full h-full border-0"
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
         </div>
+      </Container>
 
-        <div className="mt-16 pt-8 border-t rule-dark flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+      <div className="w-full h-[280px] md:h-[360px] border-y rule-dark overflow-hidden">
+        <iframe
+          title="Zirve Yemek konum haritası"
+          src={mapSrc}
+          className="w-full h-full border-0"
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        />
+      </div>
+
+      <Container className="pb-16 md:pb-20">
+        <div className="mt-8 pt-8 border-t rule-dark flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="font-mono text-[11px] text-un-soft/40 tracking-wide">
             © {year} {COMPANY.legalName}. Tüm hakları saklıdır.
           </p>

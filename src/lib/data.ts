@@ -12,7 +12,10 @@ export const COMPANY = {
   phoneDisplay: "+90 530 231 99 16",
   phoneHref: "+905302319916",
   email: "info@zirveyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
-  mapsQuery: "Ertuğrul, İzmir Yolu Cd. 10.Km No:306/D, 16000 Nilüfer/Bursa",
+  // "10.Km" ve posta kodu birlikte geçince Google'ın adres embed'i konumu
+  // çözemiyor; bu yüzden harita sorgusu görünen addressLine'dan farklı,
+  // aynı adresin geocoder-dostu bir biçimi.
+  mapsQuery: "Ertuğrul Mahallesi, İzmir Yolu Caddesi No:306/D, Nilüfer, Bursa",
   social: {
     instagram: "https://instagram.com/", // TODO
     facebook: "https://facebook.com/", // TODO
