@@ -2,28 +2,28 @@
 
 /*
   Tasarım token sistemi — Zirve Yemek Catering
-  Beyaz + Lacivert (#343246) + Kırmızı (#F9423A) + Yeşil (sürdürülebilirlik),
-  mekasyemek.com'un gerçek marka renk paletinden (indirilen CSS'ten okundu)
-  birebir alınmıştır. Altın/kirmizi tonu yalnızca logo görselinde kalır,
-  site arayüzünde ayrı bir vurgu rengi olarak kullanılmaz.
+  Beyaz + Lacivert (#0A192F) + Kırmızı (#EA424A) + Yeşil (sürdürülebilirlik),
+  markanın kendi logosundaki resmi renk kodlarından alınmıştır.
+  Altın tonu yalnızca logo görselinde kalır, site arayüzünde ayrı bir
+  vurgu rengi olarak kullanılmaz.
 */
 @theme inline {
   --color-un: #ffffff;
   --color-un-soft: #f7f7f8;
   --color-un-line: #e6e8eb;
 
-  --color-lacivert: #343246;
-  --color-lacivert-2: #242331;
-  --color-lacivert-soft: #46445c;
+  --color-lacivert: #0a192f;
+  --color-lacivert-2: #071221;
+  --color-lacivert-soft: #404c5d;
 
-  --color-kirmizi: #f9423a;
-  --color-kirmizi-dark: #d6301f;
+  --color-kirmizi: #ea424a;
+  --color-kirmizi-dark: #bb353b;
 
   --color-yesil: #2f6b46;
   --color-yesil-soft: #7cd070;
   --color-yesil-2: #1d5038;
 
-  --color-komur: #1a1922;
+  --color-komur: #050b15;
 
   --font-display: var(--font-fraunces);
   --font-body: var(--font-plex-sans);

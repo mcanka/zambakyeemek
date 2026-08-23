@@ -1,18 +1,16 @@
 # Zirve Yemek Catering — Kurumsal Web Sitesi
 
 mekasyemek.com'un içerik mimarisini referans alan, Zirve Yemek'in kendi
-marka kimliğiyle (siyah + altın logo, kırmızı/lacivert site paleti) hayata
+marka kimliğiyle (kırmızı + lacivert logo, aynı renklerde site paleti) hayata
 geçirilmiş kurumsal site. Next.js (App Router) + Tailwind CSS v4 ile
 geliştirildi, Vercel'e sıfır ek yapılandırmayla deploy edilecek şekilde
 kuruldu.
 
 ## Tasarım sistemi
 
-- **Renkler:** Beyaz + Lacivert (`#343246`) + Kırmızı (`#F9423A`, CTA/vurgu) +
-  Yeşil (sürdürülebilirlik) — mekasyemek.com'un gerçek marka renklerinden
-  alınmıştır. Altın/safran tonu yalnızca logo görselinde kullanılır, site
-  arayüzünde ayrı bir vurgu rengi değildir. Bkz. `src/app/globals.css`
-  içindeki `@theme` bloğu.
+- **Renkler:** Beyaz + Lacivert (`#0A192F`) + Kırmızı (`#EA424A`, CTA/vurgu) +
+  Yeşil (sürdürülebilirlik) — markanın resmi logo renkleridir. Bkz.
+  `src/app/globals.css` içindeki `@theme` bloğu.
 - **Tipografi:** Fraunces (başlıklar, serif) + IBM Plex Sans (gövde metni) +
   IBM Plex Mono (istatistik/etiket verileri).
 - **İmza öğesi:** Hero bölümündeki "üretim sayacı" — günlük üretim
@@ -52,10 +50,14 @@ olarak kullanılan yer tutucuları `<Placeholder src="/tesis.jpg" alt="..." ... 
 şeklinde `src` prop'u ekleyerek değiştirin — bileşen otomatik olarak optimize
 edilmiş bir `next/image` çıktısına döner, başka bir değişiklik gerekmez.
 
-Logo, `src/components/ui/Logo.tsx` içinde şu an tipografik bir wordmark
-olarak render ediliyor; gerçek logo dosyası (tercihen şeffaf arka planlı
-PNG/SVG) `public/` içine eklenip bu bileşende `next/image` ile kullanılacak
-şekilde güncellenmelidir.
+Logo, `src/components/ui/Logo.tsx` içinde gerçek marka görseli olarak
+render ediliyor (`public/images/logo-navy-compact.png` — orijinal lacivert
+zeminli logodan arka planı şeffaflaştırılıp etiket kısmı kırpılarak
+üretildi, bkz. `public/images/CREDITS.md`). Yalnızca koyu (`tone="dark"`)
+varyant gerçek görseli kullanıyor; açık zemin varyantı (`tone="light"`)
+henüz tipografik wordmark — beyaz dolgulu logo öğeleri açık zeminde
+okunmadığından, açık zemin için ayrı bir logo varyantı gerekirse marka
+sahibinden talep edilmelidir.
 
 ## Ortam değişkenleri
 
@@ -84,8 +86,6 @@ embed yöntemiyle çalışır; ek yapılandırma gerekmez.
 
 `src/lib/data.ts` içinde `TODO` yorumuyla işaretlenmiştir:
 
-- Gerçek logo dosyası (şeffaf arka planlı PNG/SVG) — şu an `Zirve Yemek`
-  tipografik wordmark kullanılıyor
 - Gerçek tesis/üretim/personel/ürün fotoğrafları (yer tutucular next/image ile değiştirilmeli)
 - Şehir, açık adres, telefon, e-posta, sosyal medya hesap linkleri
 - Güncel kapasite/personel rakamları (şu an illüstratif örnek değerler)

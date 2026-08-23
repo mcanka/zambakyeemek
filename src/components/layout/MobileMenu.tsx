@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -75,7 +76,13 @@ export function MobileMenu() {
               }`}
             >
               <div className="flex items-center justify-between px-6 h-20 border-b rule-dark">
-                <span className="font-display text-2xl text-un-soft">Zirve Yemek</span>
+                <Image
+                  src="/images/logo-navy-compact.png"
+                  alt="Zirve Yemek Catering"
+                  width={1676}
+                  height={1010}
+                  className="h-9 w-auto"
+                />
                 <button
                   type="button"
                   onClick={closeMenu}
