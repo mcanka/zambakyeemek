@@ -12,6 +12,7 @@ const SOCIALS = [
 
 export function Footer() {
   const year = new Date().getFullYear();
+  const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(COMPANY.mapsQuery)}&output=embed`;
 
   return (
     <footer className="bg-lacivert-2 texture-steel">
@@ -90,12 +91,27 @@ export function Footer() {
           </div>
         </div>
 
+        <div className="mt-14">
+          <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
+            Konumumuz
+          </p>
+          <div className="aspect-[16/5] w-full border rule-dark overflow-hidden">
+            <iframe
+              title="Zirve Yemek konum haritası"
+              src={mapSrc}
+              className="w-full h-full border-0"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </div>
+
         <div className="mt-16 pt-8 border-t rule-dark flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
           <p className="font-mono text-[11px] text-un-soft/40 tracking-wide">
             © {year} {COMPANY.legalName}. Tüm hakları saklıdır.
           </p>
           <p className="font-mono text-[11px] text-un-soft/40 tracking-wide">
-            Türkiye
+            {COMPANY.city}, Türkiye
           </p>
         </div>
       </Container>

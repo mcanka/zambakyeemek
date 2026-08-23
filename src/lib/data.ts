@@ -6,13 +6,13 @@ export const COMPANY = {
   legalName: "Zirve Yemek Catering", // TODO: gerçek ticari unvan ile değiştirilmeli
   shortName: "Zirve",
   tagline: "Catering", // logodaki alt başlık
-  city: "", // TODO: gerçek şehir bilgisi eklenmeli
-  district: "", // TODO: gerçek adres/bölge bilgisi eklenmeli
-  addressLine: "Adres bilgisi yakında eklenecek", // TODO: açık adres ile değiştirilmeli
-  phoneDisplay: "0212 000 00 00", // TODO: gerçek telefon numarası
-  phoneHref: "+902120000000",
+  city: "Bursa",
+  district: "Nilüfer",
+  addressLine: "Ertuğrul, İzmir Yolu Cd. 10.Km No:306/D, 16000 Nilüfer/Bursa",
+  phoneDisplay: "+90 530 231 99 16",
+  phoneHref: "+905302319916",
   email: "info@zirveyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
-  mapsQuery: "Türkiye", // TODO: gerçek adres eklenince tesis konumuna güncellenmeli
+  mapsQuery: "Ertuğrul, İzmir Yolu Cd. 10.Km No:306/D, 16000 Nilüfer/Bursa",
   social: {
     instagram: "https://instagram.com/", // TODO
     facebook: "https://facebook.com/", // TODO
