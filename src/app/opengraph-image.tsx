@@ -47,7 +47,7 @@ export default function OpengraphImage() {
         </div>
 
         <div style={{ display: "flex", fontSize: 22, color: "rgba(255,255,255,0.45)", letterSpacing: 2 }}>
-          zirveyemek.com
+          zambakyemek.com
         </div>
       </div>
     ),

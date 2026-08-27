@@ -15,15 +15,13 @@ fotoğrafları teslim edildiğinde bu dosyaların yerine geçmelidir (bkz. READM
 | kamu-kurumlari.jpg | rawpixel.com | CC0 |
 | egitim-kurumlari.jpg | USDA (ABD Tarım Bakanlığı) via Flickr | Public Domain |
 
-## Logo dosyaları
+## Logo dosyaları — ARTIK KULLANILMIYOR (eski "Zirve Yemek" markası)
 
-Marka sahibinden teslim alınan resmi logo, iki zemin renginde geldi
-(`Kırmızı Arkaplan.png`, `Lacivert Arkaplan.png` — orijinal kaynak dosyalar,
-referans için saklanıyor). Bu dosyalardan üretilen, sitede kullanılan
-türetilmiş varlıklar:
-
-| Dosya | Nasıl üretildi |
-|---|---|
-| logo-navy-transparent.png | Lacivert Arkaplan.png'nin `#0A192F` zemini şeffaflaştırılıp kırpıldı — etiketli (uzun) tam sürüm |
-| logo-navy-compact.png | Yukarıdakinin alt kısmındaki "Lezzetin Zirvesi..." etiketi kırpıldı — Header/Footer/mobil menüde kullanılan sürüm |
-| logo-red-transparent.png | Kırmızı Arkaplan.png'nin `#EA424A` zemini şeffaflaştırılıp kırpıldı — şu an kullanılmıyor, açık zemin ihtiyacı çıkarsa değerlendirilebilir (beyaz dolgulu harfler açık zeminde zayıf okunuyor) |
+Site adı Zambak Yemek olarak değiştiği için bu klasördeki logo dosyaları
+(`Kırmızı Arkaplan.png`, `Lacivert Arkaplan.png` ve bunlardan türetilen
+`logo-navy-transparent.png`, `logo-navy-compact.png`, `logo-red-transparent.png`)
+görselin içine gömülü "ZİRVE YEMEK" yazısı ve dağ amblemi nedeniyle
+artık yanlış markayı gösteriyor ve kodda kullanılmıyor. Header/Footer/
+mobil menüde şu an "Zambak Yemek" yazılı tipografik bir wordmark
+kullanılıyor. Yeni bir Zambak Yemek logosu sağlandığında bu dosyaların
+yerine aynı şeffaflaştırma/kırpma sürecinden geçirilip geçmelidir.

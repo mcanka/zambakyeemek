@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { NAV_LINKS } from "@/lib/data";
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.zirveyemek.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.zambakyemek.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes = [...NAV_LINKS.map((l) => l.href), "/kariyer"];

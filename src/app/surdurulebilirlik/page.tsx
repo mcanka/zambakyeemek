@@ -8,7 +8,7 @@ import { SUSTAINABILITY_PILLARS } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Sürdürülebilirlik",
   description:
-    "Zirve Yemek'in insan, toplum ve çevre odaklı sürdürülebilirlik yaklaşımı.",
+    "Zambak Yemek'in insan, toplum ve çevre odaklı sürdürülebilirlik yaklaşımı.",
 };
 
 const DETAILS: Record<string, string[]> = {

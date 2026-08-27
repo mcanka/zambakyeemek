@@ -7,7 +7,7 @@ import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "İletişim",
-  description: "Zirve Yemek ile iletişime geçin — adres, telefon, e-posta ve iletişim formu.",
+  description: "Zambak Yemek ile iletişime geçin — adres, telefon, e-posta ve iletişim formu.",
 };
 
 function IconBadge({ children }: { children: ReactNode }) {

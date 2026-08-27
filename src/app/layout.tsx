@@ -27,7 +27,7 @@ const plexMono = IBM_Plex_Mono({
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.zirveyemek.com";
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.zambakyemek.com";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -36,12 +36,12 @@ export const metadata: Metadata = {
     template: `%s | ${COMPANY.name}`,
   },
   description:
-    "Zirve Yemek Catering; eğitim, kamu ve sanayi kuruluşlarına günlük binlerce öğün kapasiteyle güvenilir, hijyenik ve zamanında toplu yemek üretimi ve taşıma yemek servisi sunar.",
+    "Zambak Yemek Catering; eğitim, kamu ve sanayi kuruluşlarına günlük binlerce öğün kapasiteyle güvenilir, hijyenik ve zamanında toplu yemek üretimi ve taşıma yemek servisi sunar.",
   keywords: [
     "toplu yemek üretimi",
     "taşıma yemek servisi",
     "kurumsal catering",
-    "Zirve Yemek",
+    "Zambak Yemek",
     "fabrika yemekhane hizmeti",
   ],
   openGraph: {

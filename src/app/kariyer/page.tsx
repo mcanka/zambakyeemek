@@ -8,7 +8,7 @@ import { COMPANY } from "@/lib/data";
 
 export const metadata: Metadata = {
   title: "Kariyer",
-  description: "Zirve Yemek ekibine katılın — açık pozisyonlar ve başvuru bilgileri.",
+  description: "Zambak Yemek ekibine katılın — açık pozisyonlar ve başvuru bilgileri.",
 };
 
 const REASONS = [
@@ -38,7 +38,7 @@ export default function KariyerPage() {
 
       <section className="bg-un-soft py-20 md:py-28">
         <Container>
-          <SectionHeading eyebrow="Neden Zirve Yemek?" title="Kesintisiz üretimin arkasındaki ekibin parçası olun." />
+          <SectionHeading eyebrow="Neden Zambak Yemek?" title="Kesintisiz üretimin arkasındaki ekibin parçası olun." />
           <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-6">
             {REASONS.map((reason, i) => (
               <Reveal key={reason.title} delay={i * 100}>

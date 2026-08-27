@@ -100,7 +100,7 @@ export function Footer() {
 
       <div className="w-full h-[280px] md:h-[360px] border-y rule-dark overflow-hidden">
         <iframe
-          title="Zirve Yemek konum haritası"
+          title="Zambak Yemek konum haritası"
           src={mapSrc}
           className="w-full h-full border-0"
           loading="lazy"

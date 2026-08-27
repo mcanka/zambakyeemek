@@ -1,6 +1,6 @@
-# Zirve Yemek Catering — Kurumsal Web Sitesi
+# Zambak Yemek Catering — Kurumsal Web Sitesi
 
-mekasyemek.com'un içerik mimarisini referans alan, Zirve Yemek'in kendi
+mekasyemek.com'un içerik mimarisini referans alan, Zambak Yemek'in kendi
 marka kimliğiyle (kırmızı + lacivert logo, aynı renklerde site paleti) hayata
 geçirilmiş kurumsal site. Next.js (App Router) + Tailwind CSS v4 ile
 geliştirildi, Vercel'e sıfır ek yapılandırmayla deploy edilecek şekilde

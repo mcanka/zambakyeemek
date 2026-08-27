@@ -75,7 +75,7 @@ export async function POST(request: Request) {
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: process.env.CONTACT_FROM_EMAIL || "Zirve Yemek Web Sitesi <onboarding@resend.dev>",
+        from: process.env.CONTACT_FROM_EMAIL || "Zambak Yemek Web Sitesi <onboarding@resend.dev>",
         to: [toEmail],
         reply_to: email,
         subject: `Web sitesi iletişim formu — ${name}`,

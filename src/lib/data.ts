@@ -2,16 +2,16 @@
 // TODO işaretli alanlar, gerçek kurumsal veriler sağlandığında güncellenmelidir.
 
 export const COMPANY = {
-  name: "Zirve Yemek",
-  legalName: "Zirve Yemek Catering", // TODO: gerçek ticari unvan ile değiştirilmeli
-  shortName: "Zirve",
+  name: "Zambak Yemek",
+  legalName: "Zambak Yemek Catering", // TODO: gerçek ticari unvan ile değiştirilmeli
+  shortName: "Zambak",
   tagline: "Catering", // logodaki alt başlık
   city: "Bursa",
   district: "Nilüfer",
   addressLine: "Ertuğrul, İzmir Yolu Cd. 10.Km No:306/D, 16000 Nilüfer/Bursa",
   phoneDisplay: "+90 530 231 99 16",
   phoneHref: "+905302319916",
-  email: "info@zirveyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
+  email: "info@zambakyemek.com", // TODO: gerçek e-posta ile teyit edilmeli
   // "10.Km" ve posta kodu birlikte geçince Google'ın adres embed'i konumu
   // çözemiyor; bu yüzden harita sorgusu görünen addressLine'dan farklı,
   // aynı adresin geocoder-dostu bir biçimi.
@@ -89,10 +89,10 @@ export const RECIPE_CARD = {
 
 // TODO: örnek/placeholder isimlerdir — gerçek iştirak adları ve logolarıyla değiştirilmeli
 export const PARTNERS = [
-  { name: "Zirve Lojistik" },
-  { name: "Zirve Tarım" },
-  { name: "Zirve Gıda" },
-  { name: "Zirve Eğitim Vakfı" },
+  { name: "Zambak Lojistik" },
+  { name: "Zambak Tarım" },
+  { name: "Zambak Gıda" },
+  { name: "Zambak Eğitim Vakfı" },
 ] as const;
 
 export const SUSTAINABILITY_PILLARS = [

@@ -11,7 +11,7 @@ import { CERTIFICATIONS, COMPANY } from "@/lib/data";
 export const metadata: Metadata = {
   title: "Hakkımızda",
   description:
-    "Zirve Yemek'in hikayesi, vizyonu ve üretim tesisi hakkında bilgi edinin.",
+    "Zambak Yemek'in hikayesi, vizyonu ve üretim tesisi hakkında bilgi edinin.",
 };
 
 export default function HakkimizdaPage() {

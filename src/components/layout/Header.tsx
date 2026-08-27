@@ -31,7 +31,7 @@ export function Header() {
           scrolled ? "h-16" : "h-20"
         }`}
       >
-        <Logo tone="dark" imgClassName="h-12 md:h-14 w-auto" />
+        <Logo tone="dark" textClassName="text-3xl md:text-4xl" />
 
         <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Ana menü">
           {NAV_LINKS.map((link) => {

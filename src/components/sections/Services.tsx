@@ -23,7 +23,7 @@ export function Services() {
           <div className="mt-14 grid grid-cols-1 lg:grid-cols-[1.2fr_1fr] gap-0 border rule-light">
             <Placeholder
               label="Soğutmalı Nakliye Filosu — Yer Tutucu"
-              alt="Zirve Yemek taşıma yemek servisi aracı"
+              alt="Zambak Yemek taşıma yemek servisi aracı"
               tone="un"
               className="aspect-[16/11] lg:aspect-auto"
             />
