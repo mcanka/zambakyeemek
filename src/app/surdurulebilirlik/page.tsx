@@ -49,7 +49,7 @@ export default function SurdurulebilirlikPage() {
                     <ul className="mt-5 space-y-2.5">
                       {DETAILS[pillar.title]?.map((line) => (
                         <li key={line} className="flex gap-3 text-sm text-komur/60 leading-relaxed">
-                          <span aria-hidden className="text-kirmizi mt-1">—</span>
+                          <span aria-hidden className="text-koyu mt-1">—</span>
                           {line}
                         </li>
                       ))}

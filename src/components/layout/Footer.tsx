@@ -15,7 +15,7 @@ export function Footer() {
   const mapSrc = `https://www.google.com/maps?q=${encodeURIComponent(COMPANY.mapsQuery)}&output=embed`;
 
   return (
-    <footer className="bg-lacivert-2 texture-steel">
+    <footer className="bg-koyu-2 texture-steel">
       <Container className="pt-16 md:pt-20">
         <div className="grid grid-cols-1 md:grid-cols-[1.3fr_1fr_1fr_1.1fr] gap-12 md:gap-8">
           <div>
@@ -27,7 +27,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-un-soft mb-4">
               Site Haritası
             </p>
             <ul className="space-y-2.5">
@@ -42,7 +42,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4 md:opacity-0">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-un-soft mb-4 md:opacity-0">
               &nbsp;
             </p>
             <ul className="space-y-2.5">
@@ -57,7 +57,7 @@ export function Footer() {
           </div>
 
           <div>
-            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
+            <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-un-soft mb-4">
               İletişim
             </p>
             <address className="not-italic text-sm text-un-soft/70 leading-relaxed space-y-2">
@@ -82,7 +82,7 @@ export function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={s.label}
-                  className="text-un-soft/50 hover:text-un-soft transition-all duration-200 ease-out font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-kirmizi hover:bg-kirmizi hover:-translate-y-0.5 px-2.5 py-1.5"
+                  className="text-un-soft/50 hover:text-koyu transition-all duration-200 ease-out font-mono text-[10px] tracking-wide uppercase border border-un-soft/20 hover:border-un hover:bg-un hover:-translate-y-0.5 px-2.5 py-1.5"
                 >
                   {s.label.slice(0, 2)}
                 </a>
@@ -92,7 +92,7 @@ export function Footer() {
         </div>
 
         <div className="mt-14">
-          <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-kirmizi mb-4">
+          <p className="font-mono text-[11px] tracking-[0.18em] uppercase text-un-soft mb-4">
             Konumumuz
           </p>
         </div>

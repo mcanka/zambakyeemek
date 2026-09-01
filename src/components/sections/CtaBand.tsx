@@ -22,7 +22,7 @@ export function CtaBand({
               <p className="mt-4 text-komur/65 leading-relaxed">{description}</p>
             </div>
             <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4 shrink-0">
-              <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-komur/70 hover:text-kirmizi transition-colors">
+              <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-komur/70 hover:text-koyu transition-colors">
                 {COMPANY.phoneDisplay}
               </a>
               <Button href="/iletisim" variant="primary">

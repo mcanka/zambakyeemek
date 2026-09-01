@@ -23,12 +23,12 @@ export function ContentCards() {
                 <Placeholder
                   label="Etli Sultan Kebabı — Yer Tutucu"
                   alt={RECIPE_CARD.title}
-                  tone="kirmizi"
+                  tone="koyu"
                   className="absolute inset-0 transition-transform duration-500 group-hover:scale-105"
                 />
               </div>
               <div className="p-7 md:p-8">
-                <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-kirmizi">
+                <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-koyu">
                   {RECIPE_CARD.category}
                 </span>
                 <h3 className="mt-3 font-display text-2xl text-komur">{RECIPE_CARD.title}</h3>
@@ -42,9 +42,9 @@ export function ContentCards() {
           </Reveal>
 
           <Reveal delay={200}>
-            <article className="h-full border rule-light bg-yesil-2 text-un-soft flex flex-col justify-between p-7 md:p-8">
+            <article className="h-full border rule-light bg-koyu text-un-soft flex flex-col justify-between p-7 md:p-8">
               <div>
-                <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-kirmizi">
+                <span className="font-mono text-[11px] tracking-[0.14em] uppercase text-un-soft">
                   Beslenme Bilgisi
                 </span>
                 <h3 className="mt-3 font-display text-2xl">Kalori Cetveli</h3>
@@ -53,7 +53,7 @@ export function ContentCards() {
                   besin değeri bilgilerine buradan ulaşabilirsiniz.
                 </p>
               </div>
-              <div className="mt-8 font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">
+              <div className="mt-8 font-mono text-xs tracking-[0.14em] uppercase text-un-soft">
                 Yakında →
               </div>
             </article>

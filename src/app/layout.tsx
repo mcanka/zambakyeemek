@@ -65,7 +65,7 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a192f",
+  themeColor: "#0e2a20",
   width: "device-width",
   initialScale: 1,
 };
@@ -84,7 +84,7 @@ export default function RootLayout({
       <body className="antialiased">
         <a
           href="#icerik"
-          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-kirmizi focus:text-un-soft focus:px-4 focus:py-2 focus:text-sm"
+          className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:bg-koyu focus:text-un-soft focus:px-4 focus:py-2 focus:text-sm"
         >
           İçeriğe geç
         </a>

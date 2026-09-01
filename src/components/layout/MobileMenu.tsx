@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
@@ -62,7 +63,7 @@ export function MobileMenu() {
         />
         <span
           className={`block h-px transition-all duration-300 ease-out ${
-            open ? "w-6 self-center -translate-y-[7px] -rotate-45 bg-un-soft" : "w-4 self-end bg-kirmizi"
+            open ? "w-6 self-center -translate-y-[7px] -rotate-45 bg-un-soft" : "w-4 self-end bg-un-soft"
           }`}
         />
       </button>
@@ -70,14 +71,18 @@ export function MobileMenu() {
       {mounted
         ? createPortal(
             <div
-              className={`fixed inset-0 z-50 bg-lacivert-2 texture-steel flex flex-col transition-opacity duration-300 ease-out ${
+              className={`fixed inset-0 z-50 bg-koyu-2 texture-steel flex flex-col transition-opacity duration-300 ease-out ${
                 visible ? "opacity-100" : "opacity-0"
               }`}
             >
               <div className="flex items-center justify-between px-6 h-20 border-b rule-dark">
-                <span className="font-display text-2xl tracking-tight text-un-soft">
-                  Zambak <span className="font-normal">Yemek</span>
-                </span>
+                <Image
+                  src="/images/zambak-logo-dark-compact.png"
+                  alt="Zambak Yemek Catering"
+                  width={1436}
+                  height={1200}
+                  className="h-11 w-auto"
+                />
                 <button
                   type="button"
                   onClick={closeMenu}
@@ -97,7 +102,7 @@ export function MobileMenu() {
                       onClick={closeMenu}
                       aria-current={active ? "page" : undefined}
                       className={`font-display text-3xl py-3 border-b rule-dark flex items-center justify-between transition-all ease-out ${
-                        active ? "text-kirmizi" : "text-un-soft"
+                        active ? "text-un-soft" : "text-un-soft/70"
                       } ${visible ? "translate-x-0 opacity-100" : "translate-x-4 opacity-0"}`}
                       style={{
                         transitionDuration: "400ms",
@@ -105,7 +110,7 @@ export function MobileMenu() {
                       }}
                     >
                       {link.label}
-                      <span className="font-mono text-xs text-kirmizi">
+                      <span className="font-mono text-xs text-un-soft/50">
                         {String(i + 1).padStart(2, "0")}
                       </span>
                     </Link>
@@ -118,13 +123,13 @@ export function MobileMenu() {
                 }`}
                 style={{ transitionDelay: visible ? "260ms" : "0ms" }}
               >
-                <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-kirmizi tracking-wide">
+                <a href={`tel:${COMPANY.phoneHref}`} className="font-mono text-sm text-un-soft tracking-wide">
                   {COMPANY.phoneDisplay}
                 </a>
                 <Link
                   href="/iletisim"
                   onClick={closeMenu}
-                  className="mt-4 block text-center bg-kirmizi text-un-soft py-3.5 text-sm font-medium tracking-wide transition-colors hover:bg-kirmizi-dark"
+                  className="mt-4 block text-center bg-un text-koyu py-3.5 text-sm font-medium tracking-wide transition-colors hover:bg-un-soft"
                 >
                   Teklif Al
                 </Link>

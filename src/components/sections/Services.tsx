@@ -27,8 +27,8 @@ export function Services() {
               tone="un"
               className="aspect-[16/11] lg:aspect-auto"
             />
-            <div className="p-8 md:p-12 flex flex-col justify-center bg-lacivert texture-steel">
-              <p className="font-mono text-xs tracking-[0.2em] uppercase text-kirmizi">
+            <div className="p-8 md:p-12 flex flex-col justify-center bg-koyu texture-steel">
+              <p className="font-mono text-xs tracking-[0.2em] uppercase text-un-soft">
                 Ana Hizmet
               </p>
               <h3 className="mt-4 font-display text-3xl md:text-[2.2rem] leading-tight text-un-soft">
@@ -47,8 +47,8 @@ export function Services() {
         <div className="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6">
           {rest.map((service, i) => (
             <Reveal key={service.slug} delay={150 + i * 100}>
-              <div className="h-full border rule-light p-8 md:p-10 hover:border-kirmizi/40 transition-colors">
-                <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">
+              <div className="h-full border rule-light p-8 md:p-10 hover:border-koyu/40 transition-colors">
+                <span className="font-mono text-xs tracking-[0.14em] uppercase text-koyu">
                   {String(i + 2).padStart(2, "0")}
                 </span>
                 <h3 className="mt-4 font-display text-2xl leading-tight text-komur">

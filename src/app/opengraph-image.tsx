@@ -14,7 +14,7 @@ export default function OpengraphImage() {
           display: "flex",
           flexDirection: "column",
           justifyContent: "space-between",
-          background: "#0a192f",
+          background: "#0e2a20",
           padding: "72px",
           fontFamily: "sans-serif",
         }}
@@ -25,7 +25,7 @@ export default function OpengraphImage() {
             fontSize: 28,
             letterSpacing: 4,
             textTransform: "uppercase",
-            color: "#ea424a",
+            color: "#ffffff",
           }}
         >
           {COMPANY.shortName} · {COMPANY.tagline}

@@ -10,35 +10,35 @@ const SUPPORT_STAT = STATS.find((s) => s.label === "Personel")!;
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden bg-lacivert">
+    <section className="relative overflow-hidden bg-koyu">
       <Placeholder
         label="Tesis Fotoğrafı — Yer Tutucu"
         src="/images/ekipman-detay.jpg"
         alt="Zambak Yemek üretim tesisi"
-        tone="steel"
+        tone="koyu"
         className="absolute inset-0"
         priority
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-r from-lacivert via-lacivert/85 to-lacivert/55"
+        className="absolute inset-0 bg-gradient-to-r from-koyu via-koyu/85 to-koyu/55"
       />
       <div
         aria-hidden
-        className="absolute inset-0 bg-gradient-to-t from-lacivert-2 via-transparent to-transparent"
+        className="absolute inset-0 bg-gradient-to-t from-koyu-2 via-transparent to-transparent"
       />
 
       <Container className="relative pt-16 pb-14 md:pt-24 md:pb-24">
         <div className="grid grid-cols-1 lg:grid-cols-[1.15fr_0.85fr] gap-14 lg:gap-10 items-end">
           <div>
             <Reveal>
-              <p className="font-mono text-xs tracking-[0.24em] uppercase text-kirmizi mb-6">
+              <p className="font-mono text-xs tracking-[0.24em] uppercase text-un-soft mb-6">
                 {COMPANY.shortName} · {COMPANY.tagline}
               </p>
             </Reveal>
             <Reveal delay={80}>
               <h1 className="font-display text-[clamp(2.5rem,6vw,4.6rem)] leading-[1.03] tracking-tight text-un-soft max-w-2xl">
-                Lezzette <em className="italic text-kirmizi">zarafet</em>, hizmette güven.
+                Lezzette <em className="italic">zarafet</em>, hizmette güven.
               </h1>
             </Reveal>
             <Reveal delay={160}>
@@ -50,7 +50,7 @@ export function Hero() {
             </Reveal>
             <Reveal delay={240}>
               <div className="mt-10 flex flex-wrap items-center gap-4">
-                <Button href="/hizmetlerimiz" variant="primary">
+                <Button href="/hizmetlerimiz" variant="primary-light">
                   Hizmetlerimizi Keşfedin
                 </Button>
                 <Button href="/iletisim" variant="outline-light">
@@ -61,11 +61,11 @@ export function Hero() {
           </div>
 
           <Reveal delay={200} className="lg:mb-1">
-            <div className="border border-un-soft/15 bg-lacivert-2/70 backdrop-blur-sm p-7 md:p-8">
+            <div className="border border-un-soft/15 bg-koyu-2/70 backdrop-blur-sm p-7 md:p-8">
               <p className="font-mono text-[11px] tracking-[0.2em] uppercase text-un-soft/50">
                 Günlük Üretim Kapasitesi
               </p>
-              <div className="mt-4 flex items-baseline gap-2 font-mono text-kirmizi">
+              <div className="mt-4 flex items-baseline gap-2 font-mono text-un-soft">
                 <Counter
                   value={CAPACITY.value}
                   className="text-[clamp(2.6rem,5vw,3.6rem)] leading-none tabular-nums"

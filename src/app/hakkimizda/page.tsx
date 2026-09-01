@@ -58,7 +58,7 @@ export default function HakkimizdaPage() {
           <div className="mt-20 grid grid-cols-1 md:grid-cols-2 gap-6">
             <Reveal>
               <div className="border rule-light p-8 md:p-10 h-full">
-                <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Vizyon</span>
+                <span className="font-mono text-xs tracking-[0.14em] uppercase text-koyu">Vizyon</span>
                 <p className="mt-4 font-display text-xl leading-snug text-komur">
                   Toplu yemek üretiminde, güvenilirliği ve şeffaflığı sektör
                   standardı haline getiren referans kuruluş olmak.
@@ -67,7 +67,7 @@ export default function HakkimizdaPage() {
             </Reveal>
             <Reveal delay={100}>
               <div className="border rule-light p-8 md:p-10 h-full">
-                <span className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Misyon</span>
+                <span className="font-mono text-xs tracking-[0.14em] uppercase text-koyu">Misyon</span>
                 <p className="mt-4 font-display text-xl leading-snug text-komur">
                   Hizmet verdiğimiz her kuruma; hijyenik, dengeli ve zamanında
                   ulaşan bir yemek deneyimi sunmak.

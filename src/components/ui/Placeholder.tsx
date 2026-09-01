@@ -9,7 +9,7 @@ export function Placeholder({
   label,
   src,
   alt = "",
-  tone = "steel",
+  tone = "koyu",
   className = "",
   sizes = "100vw",
   priority = false,
@@ -17,7 +17,7 @@ export function Placeholder({
   label: string;
   src?: string;
   alt?: string;
-  tone?: "steel" | "un" | "kirmizi" | "yesil";
+  tone?: "koyu" | "un";
   className?: string;
   sizes?: string;
   priority?: boolean;
@@ -45,10 +45,8 @@ export function Placeholder({
   }
 
   const toneClasses: Record<string, string> = {
-    steel: "bg-lacivert text-un/50",
+    koyu: "bg-koyu text-un/50",
     un: "bg-un-line/60 text-komur/40",
-    kirmizi: "bg-kirmizi-dark text-un/50",
-    yesil: "bg-yesil-2 text-un/50",
   };
 
   return (

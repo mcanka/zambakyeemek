@@ -6,7 +6,7 @@ import { SERVICES } from "@/lib/data";
 type Status = "idle" | "submitting" | "success" | "error";
 
 const FIELD_CLASS =
-  "w-full bg-un rounded-md border border-un-line px-4 py-3 text-sm text-komur placeholder:text-komur/40 focus:border-kirmizi focus:outline-none transition-colors";
+  "w-full bg-un rounded-md border border-un-line px-4 py-3 text-sm text-komur placeholder:text-komur/40 focus:border-koyu focus:outline-none transition-colors";
 
 export function ContactForm() {
   const [status, setStatus] = useState<Status>("idle");
@@ -76,7 +76,7 @@ export function ContactForm() {
   if (status === "success") {
     return (
       <div className="border rule-light rounded-md p-8 md:p-10 bg-un">
-        <p className="font-mono text-xs tracking-[0.14em] uppercase text-kirmizi">Alındı</p>
+        <p className="font-mono text-xs tracking-[0.14em] uppercase text-koyu">Alındı</p>
         <p className="mt-4 font-display text-2xl text-komur leading-snug">
           Mesajınız için teşekkürler.
         </p>
@@ -161,7 +161,7 @@ export function ContactForm() {
       />
 
       {status === "error" ? (
-        <p role="alert" className="text-sm text-kirmizi">
+        <p role="alert" className="text-sm text-koyu font-medium">
           {errorMessage}
         </p>
       ) : null}
@@ -173,7 +173,7 @@ export function ContactForm() {
       <button
         type="submit"
         disabled={status === "submitting"}
-        className="inline-flex items-center gap-2.5 bg-kirmizi text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide rounded-md hover:bg-kirmizi-dark transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
+        className="inline-flex items-center gap-2.5 bg-koyu text-un-soft px-7 py-3.5 text-sm font-medium tracking-wide rounded-md hover:bg-koyu-2 transition-colors disabled:opacity-60 disabled:cursor-not-allowed"
       >
         {status === "submitting" ? "Gönderiliyor…" : "Gönder"}
       </button>

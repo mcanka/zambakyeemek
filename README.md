@@ -1,16 +1,19 @@
 # Zambak Yemek Catering — Kurumsal Web Sitesi
 
 mekasyemek.com'un içerik mimarisini referans alan, Zambak Yemek'in kendi
-marka kimliğiyle (kırmızı + lacivert logo, aynı renklerde site paleti) hayata
-geçirilmiş kurumsal site. Next.js (App Router) + Tailwind CSS v4 ile
-geliştirildi, Vercel'e sıfır ek yapılandırmayla deploy edilecek şekilde
-kuruldu.
+marka kimliğiyle (koyu yeşil + beyaz logo, aynı iki renkten oluşan site
+paleti) hayata geçirilmiş kurumsal site. Next.js (App Router) + Tailwind
+CSS v4 ile geliştirildi, Vercel'e sıfır ek yapılandırmayla deploy
+edilecek şekilde kuruldu.
 
 ## Tasarım sistemi
 
-- **Renkler:** Beyaz + Lacivert (`#0A192F`) + Kırmızı (`#EA424A`, CTA/vurgu) +
-  Yeşil (sürdürülebilirlik) — markanın resmi logo renkleridir. Bkz.
-  `src/app/globals.css` içindeki `@theme` bloğu.
+- **Renkler:** Kesin olarak iki renk — Koyu Yeşil (`#0E2A20`) + Beyaz
+  (`#FFFFFF`), ikisi de resmi logo dosyasından örneklenmiştir. Üçüncü bir
+  vurgu rengi kullanılmıyor; "vurgu" ihtiyacı olan her yerde bu iki rengin
+  zemine göre tersine çevrilmiş hali (koyu zeminde beyaz, açık zeminde
+  koyu yeşil) kullanılıyor. Logodaki altın çiçek detayı yalnızca logo
+  görselinde kalır. Bkz. `src/app/globals.css` içindeki `@theme` bloğu.
 - **Tipografi:** Fraunces (başlıklar, serif) + IBM Plex Sans (gövde metni) +
   IBM Plex Mono (istatistik/etiket verileri).
 - **İmza öğesi:** Hero bölümündeki "üretim sayacı" — günlük üretim
@@ -51,13 +54,11 @@ olarak kullanılan yer tutucuları `<Placeholder src="/tesis.jpg" alt="..." ... 
 edilmiş bir `next/image` çıktısına döner, başka bir değişiklik gerekmez.
 
 Logo, `src/components/ui/Logo.tsx` içinde gerçek marka görseli olarak
-render ediliyor (`public/images/logo-navy-compact.png` — orijinal lacivert
-zeminli logodan arka planı şeffaflaştırılıp etiket kısmı kırpılarak
-üretildi, bkz. `public/images/CREDITS.md`). Yalnızca koyu (`tone="dark"`)
-varyant gerçek görseli kullanıyor; açık zemin varyantı (`tone="light"`)
-henüz tipografik wordmark — beyaz dolgulu logo öğeleri açık zeminde
-okunmadığından, açık zemin için ayrı bir logo varyantı gerekirse marka
-sahibinden talep edilmelidir.
+render ediliyor — hem koyu (`tone="dark"`, `zambak-logo-dark-compact.png`)
+hem açık (`tone="light"`, `zambak-logo-light-compact.png`) zemin için ayrı
+bir logo varyantı var; her ikisi de orijinal iki renkli logo dosyasından
+(bkz. `public/images/CREDITS.md`) arka planı şeffaflaştırılıp etiket
+kısmı kırpılarak üretildi.
 
 ## Ortam değişkenleri
 

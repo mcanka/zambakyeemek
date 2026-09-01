@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 
 function IconBadge({ children }: { children: ReactNode }) {
   return (
-    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-lacivert text-un-soft">
+    <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-koyu text-un-soft">
       {children}
     </span>
   );
@@ -62,7 +62,7 @@ export default function IletisimPage() {
                 <IconBadge>
                   <PhoneIcon />
                 </IconBadge>
-                <a href={`tel:${COMPANY.phoneHref}`} className="text-lg text-kirmizi hover:text-kirmizi-dark transition-colors">
+                <a href={`tel:${COMPANY.phoneHref}`} className="text-lg text-koyu hover:text-koyu-2 transition-colors">
                   {COMPANY.phoneDisplay}
                 </a>
               </div>
@@ -71,7 +71,7 @@ export default function IletisimPage() {
                 <IconBadge>
                   <MailIcon />
                 </IconBadge>
-                <a href={`mailto:${COMPANY.email}`} className="text-lg text-kirmizi hover:text-kirmizi-dark transition-colors break-all">
+                <a href={`mailto:${COMPANY.email}`} className="text-lg text-koyu hover:text-koyu-2 transition-colors break-all">
                   {COMPANY.email}
                 </a>
               </div>

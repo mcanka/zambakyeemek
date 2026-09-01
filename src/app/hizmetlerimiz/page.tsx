@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Taşıma yemek servisi, kurumsal catering ve özel organizasyon yemek hizmetlerimiz hakkında detaylı bilgi alın.",
 };
 
-const TONES = ["steel", "kirmizi", "yesil"] as const;
+const TONES = ["koyu", "un", "koyu"] as const;
 const SERVICE_IMAGES: Record<string, string> = {
   "kurumsal-catering": "/images/mutfak-ekip.jpg",
 };
@@ -31,7 +31,7 @@ export default function HizmetlerimizPage() {
         <section
           key={service.slug}
           id={service.slug}
-          className={`scroll-mt-24 py-20 md:py-24 ${i % 2 === 0 ? "bg-un-soft" : "bg-lacivert texture-steel"}`}
+          className={`scroll-mt-24 py-20 md:py-24 ${i % 2 === 0 ? "bg-un-soft" : "bg-koyu texture-steel"}`}
         >
           <Container>
             <div
@@ -52,7 +52,7 @@ export default function HizmetlerimizPage() {
               <Reveal delay={100}>
                 <span
                   className={`font-mono text-xs tracking-[0.14em] uppercase ${
-                    i % 2 === 0 ? "text-kirmizi" : "text-kirmizi"
+                    i % 2 === 0 ? "text-koyu" : "text-un-soft"
                   }`}
                 >
                   {String(i + 1).padStart(2, "0")} / {String(SERVICES.length).padStart(2, "0")}

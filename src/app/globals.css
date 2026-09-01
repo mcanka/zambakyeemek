@@ -2,28 +2,23 @@
 
 /*
   Tasarım token sistemi — Zambak Yemek Catering
-  Beyaz + Lacivert (#0A192F) + Kırmızı (#EA424A) + Yeşil (sürdürülebilirlik),
-  markanın kendi logosundaki resmi renk kodlarından alınmıştır.
-  Altın tonu yalnızca logo görselinde kalır, site arayüzünde ayrı bir
-  vurgu rengi olarak kullanılmaz.
+  Marka artık kesin olarak iki renk üzerine kurulu: Koyu Yeşil (#0E2A20)
+  ve Beyaz (#FFFFFF) — ikisi de resmi logo dosyasından örneklenmiştir.
+  Altın tonu yalnızca logo görselinde kalır; site arayüzünde ayrı bir
+  vurgu rengi olarak kullanılmaz. "Vurgu" ihtiyacı olan her yerde bu iki
+  rengin birbirine göre ters çevrilmiş hali (koyu zeminde beyaz, açık
+  zeminde koyu yeşil) kullanılır — üçüncü bir renk eklenmez.
 */
 @theme inline {
   --color-un: #ffffff;
-  --color-un-soft: #f7f7f8;
-  --color-un-line: #e6e8eb;
+  --color-un-soft: #f7f8f7;
+  --color-un-line: #e3e7e4;
 
-  --color-lacivert: #0a192f;
-  --color-lacivert-2: #071221;
-  --color-lacivert-soft: #404c5d;
+  --color-koyu: #0e2a20;
+  --color-koyu-2: #091b15;
+  --color-koyu-soft: #566a63;
 
-  --color-kirmizi: #ea424a;
-  --color-kirmizi-dark: #bb353b;
-
-  --color-yesil: #2f6b46;
-  --color-yesil-soft: #7cd070;
-  --color-yesil-2: #1d5038;
-
-  --color-komur: #050b15;
+  --color-komur: #06110d;
 
   --font-display: var(--font-fraunces);
   --font-body: var(--font-plex-sans);
@@ -60,13 +55,18 @@ body {
 }
 
 ::selection {
-  background: var(--color-kirmizi);
+  background: var(--color-koyu);
   color: var(--color-un-soft);
 }
 
+/* İki renkli bir markada tek bir vurgu rengi hem açık hem koyu zeminde
+   görünür olamaz; bu yüzden odak halkası beyaz bir çekirdek + koyu yeşil
+   bir dış parıltıdan oluşuyor — hangi zeminde olursa olsun okunur kalır. */
 :focus-visible {
-  outline: 2px solid var(--color-kirmizi);
-  outline-offset: 3px;
+  outline: 2px solid var(--color-un);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px var(--color-koyu);
+  border-radius: 1px;
 }
 
 /*

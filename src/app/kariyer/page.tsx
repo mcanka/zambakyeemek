@@ -43,7 +43,7 @@ export default function KariyerPage() {
             {REASONS.map((reason, i) => (
               <Reveal key={reason.title} delay={i * 100}>
                 <div className="border rule-light p-8 h-full">
-                  <span className="font-mono text-xs text-kirmizi tracking-[0.14em] uppercase">
+                  <span className="font-mono text-xs text-koyu tracking-[0.14em] uppercase">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-4 font-display text-xl text-komur">{reason.title}</h3>
@@ -55,11 +55,11 @@ export default function KariyerPage() {
         </Container>
       </section>
 
-      <section className="bg-lacivert texture-steel py-20 md:py-24">
+      <section className="bg-koyu texture-steel py-20 md:py-24">
         <Container>
           <Reveal>
             <div className="max-w-xl">
-              <p className="font-mono text-xs tracking-[0.2em] uppercase text-kirmizi mb-4">
+              <p className="font-mono text-xs tracking-[0.2em] uppercase text-un-soft mb-4">
                 Açık Pozisyonlar
               </p>
               <h2 className="font-display text-2xl md:text-3xl text-un-soft leading-tight">

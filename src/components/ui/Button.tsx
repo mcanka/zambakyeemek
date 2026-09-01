@@ -1,17 +1,22 @@
 import Link from "next/link";
 import { ReactNode } from "react";
 
-type Variant = "primary" | "outline-dark" | "outline-light" | "ghost-dark";
+// İki renkli marka: "primary" açık zeminler için koyu yeşil dolgu,
+// "primary-light" koyu zeminler için beyaz dolgu kullanır — ikisi de
+// aynı CTA ağırlığını taşır, sadece zemine göre tersine döner.
+type Variant = "primary" | "primary-light" | "outline-dark" | "outline-light" | "ghost-dark";
 
 const VARIANT_CLASSES: Record<Variant, string> = {
   primary:
-    "bg-kirmizi text-un-soft hover:bg-kirmizi-dark hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-10px_rgba(249,66,58,0.55)] active:translate-y-0 active:shadow-none",
+    "bg-koyu text-un-soft hover:bg-koyu-2 hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-10px_rgba(14,42,32,0.45)] active:translate-y-0 active:shadow-none",
+  "primary-light":
+    "bg-un text-koyu hover:bg-un-soft hover:-translate-y-0.5 hover:shadow-[0_12px_24px_-10px_rgba(0,0,0,0.35)] active:translate-y-0 active:shadow-none",
   "outline-dark":
     "border border-komur/25 text-komur hover:border-komur hover:bg-komur/5 hover:-translate-y-0.5 active:translate-y-0",
   "outline-light":
     "border border-un/30 text-un-soft hover:border-un hover:bg-un/10 hover:-translate-y-0.5 active:translate-y-0",
   "ghost-dark":
-    "text-un-soft hover:text-kirmizi",
+    "text-un-soft/70 hover:text-un-soft",
 };
 
 export function Button({
