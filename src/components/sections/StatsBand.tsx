@@ -15,15 +15,12 @@ export function StatsBand() {
               className={`px-1 md:px-8 ${i > 0 ? "border-l rule-dark" : ""}`}
             >
               <div className="flex items-baseline gap-1 font-mono text-un-soft">
-                {stat.unit === "m" ? (
-                  <span className="text-2xl md:text-3xl">m</span>
-                ) : null}
                 <Counter value={stat.value} className="text-3xl md:text-4xl tabular-nums" />
                 <span className="text-2xl md:text-3xl">{stat.suffix}</span>
               </div>
               <p className="mt-2 font-mono text-[11px] md:text-xs tracking-[0.12em] uppercase text-un-soft/55">
                 {stat.label}
-                {stat.unit && stat.unit !== "m" ? (
+                {stat.unit ? (
                   <span className="block text-un-soft/35 normal-case tracking-normal mt-0.5">{stat.unit}</span>
                 ) : null}
               </p>

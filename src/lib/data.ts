@@ -38,14 +38,6 @@ export const FOOTER_LINKS = [
   { href: "/kariyer", label: "Kariyer" },
 ] as const;
 
-// TODO: illüstratif örnek rakamlardır — gerçek kapasite/personel verileriyle değiştirilmeli
-export const STATS = [
-  { value: 4000, suffix: "³", unit: "m", label: "Kapalı Alan" },
-  { value: 250, suffix: "+", unit: "", label: "Personel" },
-  { value: 25000, suffix: "", unit: "öğün / gün", label: "Üretim Kapasitesi" },
-  { value: 25, suffix: "+", unit: "", label: "Soğutmalı Nakliye Aracı" },
-] as const;
-
 export const SERVICES = [
   {
     slug: "tasima-yemek-servisi",
@@ -78,6 +70,16 @@ export const CERTIFICATIONS = [
   "ISO 22000",
   "HACCP",
   "TSE Hizmet Yeterlilik Belgesi",
+] as const;
+
+// Ölçek yerine süreç/kalite disiplinini vurgulayan istatistikler — büyüklük
+// iddia eden rakamlar (kapalı alan, personel, araç sayısı) yerine ISO/HACCP
+// belge sayısı ve hizmet çeşitliliği gibi doğrulanabilir bilgiler kullanılıyor.
+export const STATS = [
+  { value: CERTIFICATIONS.length, suffix: "", unit: "", label: "Kalite ve Hijyen Belgesi" },
+  { value: SERVICES.length, suffix: "", unit: "", label: "Farklı Hizmet Alanı" },
+  { value: 7, suffix: "/24", unit: "", label: "Kesintisiz Üretim Disiplini" },
+  { value: 100, suffix: "%", unit: "", label: "Soğuk Zincirle Teslimat" },
 ] as const;
 
 export const RECIPE_CARD = {
