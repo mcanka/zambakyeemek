@@ -79,8 +79,8 @@ export function MobileMenu() {
                 <Image
                   src="/images/zambak-logo-dark-compact.png"
                   alt="Zambak Yemek Catering"
-                  width={1436}
-                  height={1200}
+                  width={1867}
+                  height={886}
                   className="h-11 w-auto"
                 />
                 <button

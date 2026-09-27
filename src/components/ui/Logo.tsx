@@ -22,8 +22,8 @@ export function Logo({
       <Image
         src={LOGO_SRC[tone]}
         alt="Zambak Yemek Catering"
-        width={1436}
-        height={1200}
+        width={1867}
+        height={886}
         priority
         className={imgClassName}
       />
